@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM en JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1 id="titulo">DOM en JavaScript </h1>
+    <p>Modificando atributos de elementos</p>
+
+    <input type="color" id="input">
+    <button id="boton">Cambiar el color del encabezado</button>
+    <div id="ej2" style="width: 150px;">
+        <p>parrafo 1</p>
+        <p>parrafo 2</p>
+        <p>parrafo 3</p>
+        <p>parrafo 4</p>
+        <button id="bEj2">fondo oscuro</button>
+    </div>
+</body>
+<script>
+    document.getElementById('boton').onclick = cambioColorID;
+    document.getElementById('boton').onclick = cambioColorTagName;
+    document.getElementById('bEj2').onclick = inverso;
+
+    function cambioColorID() {
+        let colorinchi = document.getElementById('input').value;
+        document.getElementById('titulo').style.color = colorinchi;
+    }
+
+    function cambioColorTagName() {
+        document.getElementsByTagName("h1")[0].style.color = document.getElementsByTagName("input")[0].value;
+    }
+
+    function inverso() {
+        if (document.getElementById('ej2').style.backgroundColor != 'black') {
+            document.getElementById('ej2').style.backgroundColor = 'black';
+            document.getElementById('ej2').style.color = 'white';
+            document.getElementById('bEj2').innerHTML = "fondo claro";
+        } else {
+            document.getElementById('ej2').style.backgroundColor = 'white';
+            document.getElementById('ej2').style.color = 'black';
+            document.getElementById('bEj2').innerHTML = "fondo oscuro";
+        }
+
+    }
+</script>
+
+</html>

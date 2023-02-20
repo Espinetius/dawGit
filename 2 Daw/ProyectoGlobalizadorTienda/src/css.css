@@ -1,0 +1,44 @@
+body {
+    overflow-x: hidden;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.subrayado:hover {
+    font-size: 2.5em;
+}
+
+.kodfun-galeri>div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    flex-wrap: wrap;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.kodfun-galeri>div:hover {
+    flex: 5;
+}
+
+.botonpagar {
+    width: 25%;
+    height: 12%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.botonpagar:hover {
+    color: darkgreen;
+}
+.enlaceVerTodos {
+    width: 85%;
+    height: 5%;
+}
+.mouseraro:hover {
+    cursor:pointer;
+}

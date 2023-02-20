@@ -1,0 +1,23 @@
+.lista1 {
+    list-style-type: none;
+}
+
+.lista2 {
+    list-style-type: circle;
+}
+
+.lista3 {
+    list-style-type: square;
+}
+
+.lista4 {
+    list-style-type: decimal;
+}
+
+.lista5 {
+    list-style-type: upper-roman;
+}
+
+.lista6 {
+    list-style-type: upper-alpha;
+}

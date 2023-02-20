@@ -1,0 +1,389 @@
+[
+  {
+    "comercial": "Pedro Martinez",
+    "producto": "estragon",
+    "precio": 279968,
+    "gastos del comercial": 9679,
+    "pais": "Canada",
+    "fecha": "02/05/91",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "comino",
+    "precio": 234305,
+    "gastos del comercial": 19182,
+    "pais": "E.E.U.U.",
+    "fecha": "15/03/91",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "comino",
+    "precio": 180969,
+    "gastos del comercial": 22234,
+    "pais": "Italia",
+    "fecha": "04/05/91",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "nuez moscada",
+    "precio": 64954,
+    "gastos del comercial": 20863,
+    "pais": "Canada",
+    "fecha": "22/05/91",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "estragon",
+    "precio": 409177,
+    "gastos del comercial": 9888,
+    "pais": "Inglaterra",
+    "fecha": "18/06/91",
+    "dia semana": "JUEVES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "comino",
+    "precio": 350413,
+    "gastos del comercial": 19145,
+    "pais": "E.E.U.U.",
+    "fecha": "15/03/91",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Marta Gines",
+    "producto": "estragon",
+    "precio": 152626,
+    "gastos del comercial": 13101,
+    "pais": "España",
+    "fecha": "29/04/91",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "estragon",
+    "precio": 442431,
+    "gastos del comercial": 1515,
+    "pais": "Canada",
+    "fecha": "12/06/91",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "nuez moscada",
+    "precio": 258352,
+    "gastos del comercial": 15266,
+    "pais": "Inglaterra",
+    "fecha": "30/05/91",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Marta Gines",
+    "producto": "comino",
+    "precio": 28519,
+    "gastos del comercial": 15751,
+    "pais": "Canada",
+    "fecha": "15/05/91",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "pimienta",
+    "precio": 348865,
+    "gastos del comercial": 24142,
+    "pais": "Italia",
+    "fecha": "25/04/91",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "estragon",
+    "precio": 354667,
+    "gastos del comercial": 13232,
+    "pais": "España",
+    "fecha": "04/04/91",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "estragon",
+    "precio": 34775,
+    "gastos del comercial": 15517,
+    "pais": "Francia",
+    "fecha": "07/06/91",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "nuez moscada",
+    "precio": 170823,
+    "gastos del comercial": 7359,
+    "pais": "Francia",
+    "fecha": "29/05/91",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Pedro Martinez",
+    "producto": "estragon",
+    "precio": 279968,
+    "gastos del comercial": 9679,
+    "pais": "Canada",
+    "fecha": "02/05/92",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "comino",
+    "precio": 234305,
+    "gastos del comercial": 19282,
+    "pais": "E.E.U.U.",
+    "fecha": "15/03/92",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "pimienta",
+    "precio": 200689,
+    "gastos del comercial": 860,
+    "pais": "España",
+    "fecha": "01/04/92",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Marta Gines",
+    "producto": "pimienta",
+    "precio": 253589,
+    "gastos del comercial": 4966,
+    "pais": "Italia",
+    "fecha": "17/03/92",
+    "dia semana": "MARTES"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "estragon",
+    "precio": 203292,
+    "gastos del comercial": 16676,
+    "pais": "Francia",
+    "fecha": "17/06/92",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "estragon",
+    "precio": 161195,
+    "gastos del comercial": 11614,
+    "pais": "Inglaterra",
+    "fecha": "15/05/92",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "nuez moscada",
+    "precio": 130260,
+    "gastos del comercial": 10630,
+    "pais": "Inglaterra",
+    "fecha": "05/04/92",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "nuez moscada",
+    "precio": 64785,
+    "gastos del comercial": 8392,
+    "pais": "E.E.U.U.",
+    "fecha": "18/05/92",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "pimienta",
+    "precio": 303376,
+    "gastos del comercial": 2962,
+    "pais": "Italia",
+    "fecha": "16/06/92",
+    "dia semana": "MARTES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "pimienta",
+    "precio": 216682,
+    "gastos del comercial": 9210,
+    "pais": "Italia",
+    "fecha": "16/04/92",
+    "dia semana": "JUEVES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "pimienta",
+    "precio": 177352,
+    "gastos del comercial": 3950,
+    "pais": "Italia",
+    "fecha": "06/05/92",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Pedro Martinez",
+    "producto": "estragon",
+    "precio": 279968,
+    "gastos del comercial": 9679,
+    "pais": "Canada",
+    "fecha": "02/05/93",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "comino",
+    "precio": 234305,
+    "gastos del comercial": 19382,
+    "pais": "E.E.U.U.",
+    "fecha": "15/03/93",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "comino",
+    "precio": 180969,
+    "gastos del comercial": 22234,
+    "pais": "Italia",
+    "fecha": "04/05/93",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "nuez moscada",
+    "precio": 64954,
+    "gastos del comercial": 20863,
+    "pais": "Canada",
+    "fecha": "22/05/93",
+    "dia semana": "VIERNES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "estragon",
+    "precio": 409377,
+    "gastos del comercial": 9888,
+    "pais": "Inglaterra",
+    "fecha": "18/06/93",
+    "dia semana": "JUEVES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "comino",
+    "precio": 350413,
+    "gastos del comercial": 19345,
+    "pais": "E.E.U.U.",
+    "fecha": "15/03/93",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "nuez moscada",
+    "precio": 313232,
+    "gastos del comercial": 7154,
+    "pais": "España",
+    "fecha": "21/05/93",
+    "dia semana": "JUEVES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "estragon",
+    "precio": 202478,
+    "gastos del comercial": 17433,
+    "pais": "Italia",
+    "fecha": "06/05/93",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Jaime Carmona",
+    "producto": "nuez moscada",
+    "precio": 151522,
+    "gastos del comercial": 15729,
+    "pais": "E.E.U.U.",
+    "fecha": "25/03/93",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Maria Montana",
+    "producto": "estragon",
+    "precio": 94883,
+    "gastos del comercial": 4805,
+    "pais": "Francia",
+    "fecha": "11/05/93",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "estragon",
+    "precio": 149335,
+    "gastos del comercial": 22119,
+    "pais": "España",
+    "fecha": "13/04/93",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "estragon",
+    "precio": 54734,
+    "gastos del comercial": 17767,
+    "pais": "E.E.U.U.",
+    "fecha": "17/05/93",
+    "dia semana": "DOMINGO"
+  },
+  {
+    "comercial": "Marta Gines",
+    "producto": "estragon",
+    "precio": 328009,
+    "gastos del comercial": 23496,
+    "pais": "Italia",
+    "fecha": "14/03/93",
+    "dia semana": "SABADO"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "estragon",
+    "precio": 159521,
+    "gastos del comercial": 13845,
+    "pais": "Francia",
+    "fecha": "03/06/93",
+    "dia semana": "MIERCOLES"
+  },
+  {
+    "comercial": "Juan Perez",
+    "producto": "estragon",
+    "precio": 347649,
+    "gastos del comercial": 4093,
+    "pais": "Canada",
+    "fecha": "12/05/93",
+    "dia semana": "MARTES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "pimienta",
+    "precio": 384861,
+    "gastos del comercial": 8165,
+    "pais": "Inglaterra",
+    "fecha": "26/03/93",
+    "dia semana": "JUEVES"
+  },
+  {
+    "comercial": "Pedro Martinez",
+    "producto": "nuez moscada",
+    "precio": 79206,
+    "gastos del comercial": 900,
+    "pais": "Italia",
+    "fecha": "01/06/93",
+    "dia semana": "LUNES"
+  },
+  {
+    "comercial": "Carmen Lopez",
+    "producto": "pimienta",
+    "precio": 285793,
+    "gastos del comercial": 3370,
+    "pais": "E.E.U.U.",
+    "fecha": "16/03/93",
+    "dia semana": "LUNES"
+  }
+]

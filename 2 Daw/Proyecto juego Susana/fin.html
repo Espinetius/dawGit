@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js.js"></script>
+    <title>StoryTeller</title>
+</head>
+
+<body onload="imprimirRanking()">
+    <audio id="audiointro" src="audios/audio3.mpeg" loop autoplay></audio>
+    <header class="centrado separado">
+        <h1>StoryTeller, elige tu propio camino</h1>
+        <nav class="visibilidad" id="menuNav">
+            <a href="/html.html" id="menuprincipal">Menu Principal</a>
+            <a id="refresh">Reinicia dia</a>
+            <a href="/fin.html" id="finJuego">Cerrar Juego</a>
+        </nav>
+    </header>
+    <h2>Gracias por jugar!</h2>
+    <h3>Jugadores hasta ahora e historia escogida:</h3>
+    <div class="centrado" id="ranking">
+    </div>
+</body>
+
+</html>

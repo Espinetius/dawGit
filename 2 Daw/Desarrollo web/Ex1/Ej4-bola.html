@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <style>
+        .container {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 80px;
+            height: 100px;
+            width: 100px;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        
+        h1 {
+            font-size: 2em;
+            color: #c604ff;
+        }
+        
+        @keyframes titulo {
+            0% {
+                font-size: 2em;
+                color: #c604ff;
+            }
+            100% {
+                font-size: 4em;
+                color: #fff805;
+            }
+        }
+        
+        @keyframes pingu {
+            100% {
+                transform: rotate(360deg);
+                transition-duration: 2s;
+                transition-timing-function: linear;
+            }
+        }
+        
+        .animando-pingu {
+            animation: pingu 2s linear infinite;
+        }
+        
+        .animando-h1 {
+            animation: titulo 4s linear 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="encabezado">Animando...</h1>
+    <div class="container">
+        <img src="pingu01.png">
+    </div>
+
+</body>
+<script>
+    window.addEventListener("load", iniciar);
+
+    function iniciar() {
+        document.getElementsByTagName("img")[0].addEventListener("click", animando);
+
+        function animando() {
+            imagen = document.getElementsByTagName("img")[0];
+            if (imagen.classList != "animando-pingu") {
+                imagen.classList = "animando-pingu";
+            }
+            titulo = document.getElementsByTagName("h1")[0];
+            if (titulo.classList != "animando-h1") {
+                titulo.classList = "animando-h1";
+            }
+
+        }
+    }
+</script>
+
+</html>

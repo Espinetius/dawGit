@@ -1,0 +1,13 @@
+emily-> cris
+sho -> yo
+
+S -> good morning. Im sho harada, may i help you?
+E -> hello, good morning. I need to install a new hardrive at my computer.
+S -> okey, 1st of all turn off your computer. 
+E -> okey, its done
+S -> now unplug the computer, and unscrew the lateral panel and unplug the 
+old hardrive. Then pug in the new hardrive and screw the lateral panel again.
+E -> may i do something more?
+S -> that is all
+E -> thanks you, bye bye.
+S -> bye 

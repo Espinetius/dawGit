@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificacion</title>
+</head>
+
+<body>
+    <label for="">Que quieres notificar: </label>
+    <input type="text" id="mensaje" placeholder="Escribe aqui"><br><br>
+    <input type="button" id="boton" value="Notificar">
+</body>
+<script>
+    function preguntar() {
+        Notification.requestPermission()
+            .then(resultado => {
+                console.log("Si estan habilitadas");
+            })
+    }
+
+    function mostrarNotificacion() {
+        if (Notification.permission == 'granted') {
+            const notificacion = new Notification("Nueva notifiacion", {
+                body: document.getElementById("mensaje").value
+            })
+        }
+    }
+    document.getElementById("boton").addEventListener("click", preguntar);
+    document.getElementById("boton").addEventListener("click", mostrarNotificacion);
+</script>
+
+</html>

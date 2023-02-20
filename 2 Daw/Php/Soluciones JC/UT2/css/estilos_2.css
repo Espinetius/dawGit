@@ -1,0 +1,30 @@
+table {
+    background-color: #1e8cbe;
+    width:60%;
+    margin:24px auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-family: helvetica,arial,sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+table th {
+    background-color: #278dbc;
+    color:#fff;
+    font-weight: 900;
+    font-size:16px;
+    padding: 8px;
+}
+table td {
+    height: 24px;
+    text-align: center;
+}
+
+table tr:nth-child(odd){
+    /*para los colores de las filas impares*/
+    background-color: #ffffff;
+}
+table tr:nth-child(even){
+    /*para los colores de las filas pares*/
+    background:#EDEDED;
+}

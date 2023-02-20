@@ -1,0 +1,12 @@
+Se necesita instalar los siguientes paquetes:
+
+flask
+flask-sqlalchemy 
+flask-marshmallow 
+marshmallow-sqlalchemy 
+pymysql
+python-dotenv
+
+Aplicación desplegada en vercel
+
+https://flask-python-mysql-modelos.vercel.app/

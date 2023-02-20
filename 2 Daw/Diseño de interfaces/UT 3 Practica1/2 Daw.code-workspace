@@ -1,0 +1,16 @@
+{
+    "folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Proyecto repositorio propio"
+		},
+		{
+			"path": "D:/XAMPP/htdocs/dashboard/david"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "2 Daw"
+    }
+}

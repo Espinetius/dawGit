@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript and the DOM</title>
+    <link rel="stylesheet" href="css/stylecss.css">
+
+</head>
+
+<body>
+    <h1 id="encabezado">DOM en JavaScript. Añadir elemento </h1>
+    <div class="lista">
+        <p class="description">Cosas que son violeta:</p>
+        <ul id="lista">
+            <li>ciruelas</li>
+            <li>amatista</li>
+            <li>lavanda</li>
+            <li>berenjena</li>
+        </ul>
+        <input type="text" class="AñadirElemento" id="input">
+        <button class="BotonAñadir" onclick="añadir();">Añadir</button>
+        <button class="BotonEliminar" onclick="eliminarPrimero();">eliminar primero</button>
+        <button class="BotonEliminar" onclick="eliminarUltimo();">eliminar ultimo</button>
+    </div>
+</body>
+<script>
+    //ejercicio 3
+    function añadir() {
+        let input = document.getElementById('input').value;
+        let texto = document.createTextNode(input);
+        let nuevaLista = document.createElement('li');
+        nuevaLista.appendChild(texto);
+        document.body.appendChild(nuevaLista);
+    }
+    //ejercicio 4
+    function eliminarPrimero() {
+        let contenido = document.getElementById("lista");
+        let hijo = contenido.firstElementChild;
+        contenido.removeChild(hijo);
+    }
+
+    function eliminarUltimo() {
+        let contenido = document.getElementById("lista");
+        let hijo = contenido.lastElementChild;
+        contenido.removeChild(hijo);
+    }
+</script>
+
+</html>

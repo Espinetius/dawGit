@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+        
+        .logo {
+            background-color: #cac;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .header {
+            background-color: #fff2f2;
+            font-size: 15px;
+            text-align: center;
+            padding: 5px;
+            grid-column-start: 2;
+            grid-column-end: 11;
+        }
+        
+        .nav {
+            background-color: #cab;
+            padding: 15px;
+            text-align: right;
+            grid-column-start: 11;
+            grid-column-end: 13;
+        }
+        
+        .left {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        
+        .middle {
+            grid-column-start: 3;
+            grid-column-end: 10;
+        }
+        
+        .right {
+            grid-column-start: 10;
+            grid-column-end: 13;
+        }
+        
+        .left,
+        .middle,
+        .right {
+            padding: 10px;
+            background-color: #aba;
+        }
+        
+        .footer {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            background-color: #f1f1f2;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>EJERCICIO DE GRID</h2>
+
+    <div class="grid-container">
+        <div class="logo">logo </div>
+        <div class="header">
+            <h2>Cabecera</h2>
+        </div>
+        <div class="nav">Barra de navegación </div>
+        <div class="left">columna 1</div>
+        <div class="middle">columna 2</div>
+        <div class="right">columna 3</div>
+
+        <div class="footer">
+            <p>Pie</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

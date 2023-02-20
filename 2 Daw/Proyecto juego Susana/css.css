@@ -1,0 +1,285 @@
+.esconder {
+    /*Clase generica para esconder contenido*/
+    visibility: hidden;
+    display: none !important;
+}
+
+.mostrar {
+    /*Clase generica para mostrar contenido*/
+    visibility: visible;
+}
+
+.textocentrado {
+    text-align: center;
+}
+
+.centrado {
+    /*Clase generica para centrar items*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separado {
+    justify-content: space-around;
+}
+
+html {
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
+}
+
+#temporizador {
+    background-color: rgba(88, 53, 28, 0.883);
+    font-size: 40px;
+}
+
+
+/*
+.reloj {
+    animation-name: tiempo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tiempo {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+*/
+
+#temporizador {
+    font-size: 40px;
+    text-align: center;
+}
+
+#reloj {
+    display: block;
+    background-color: rgba(88, 53, 28, 0.883);
+    animation-name: tiempo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tiempo {
+    from {
+        width: 40%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+body {
+    background-color: black;
+    background-image: url(./img/textura-vieja-hoja-de-papel-arrugada-cafe_2362x1575_xtrafondos.com.jpg);
+    margin: 0px;
+    padding: 0%;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(36, 22, 12, 0.883);
+    height: 15%;
+    border: 3px rgb(36, 22, 12) solid;
+}
+
+.targeta {
+    width: 50vw;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: Segoe Script;
+    font-size: 150%;
+    color: white;
+    margin: 0;
+    padding: 1%;
+}
+
+#menuNav {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ranking {
+    flex-direction: column;
+}
+
+#menuNav>a,
+button {
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 1.5%;
+    border: 2px solid rgb(36, 22, 12);
+    border-radius: 25%;
+    margin: 1%;
+    background-color: rgba(88, 53, 28, 0.883);
+}
+
+#menuNav>a :hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h2,
+h3 {
+    font-family: Segoe Script;
+    text-align: center;
+}
+
+.fondo {
+    display: flex;
+    height: 60%;
+    align-items: center;
+    margin: 3%;
+}
+
+.inputNomUser {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+}
+
+p {
+    font-family: Segoe Script;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+form {
+    width: 70%;
+    height: 79%;
+    z-index: 1;
+    margin-right: 8%;
+    flex-wrap: wrap;
+    background-color: rgba(36, 22, 12, 0.883);
+    color: white;
+    padding: 2%;
+    border: 3px rgb(36, 22, 12) solid;
+    width: 33.33%;
+}
+
+#botonFormulario {
+    width: 35%;
+    height: 40px;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 1.5%;
+    border: 2px solid rgb(36, 22, 12);
+    border-radius: 25%;
+    margin: 1%;
+    background-color: rgba(88, 53, 28, 0.883)
+}
+
+#introduceNombre {
+    text-align: center;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.inputsjugdor {
+    margin: 5%;
+    width: 100%;
+    display: flex;
+}
+
+.selectores {
+    flex-direction: column;
+    width: 100%;
+}
+
+button {
+    width: 40%;
+    height: 40%;
+    text-align: center;
+}
+
+.imagen-div {
+    display: block;
+    padding: 8%;
+    width: 30%;
+    height: 70%;
+    z-index: 0;
+}
+
+#imagen {
+    width: 400px;
+    height: 350px;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: 20%;
+    }
+    h1 {
+        text-align: center;
+    }
+    #menuNav {
+        width: 60vw;
+    }
+    .fondo-cuaderno {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    form {
+        margin: 0%;
+        width: 100%;
+    }
+    .imagen-div {
+        display: none;
+    }
+    .targeta {
+        width: 70vw;
+        height: 50vh;
+        overflow-y: scroll;
+    }
+}
+
+.fondo-cuaderno {
+    width: 90%;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        height: 100%;
+    }
+    header {
+        height: 30%;
+    }
+    #menuNav {
+        flex-direction: column;
+        width: auto;
+        flex-direction: row;
+    }
+    .fondo {
+        height: 65%;
+    }
+    .fondo-cuaderno {
+        width: 100%;
+        height: 100%;
+    }
+    form {
+        height: 100%;
+        width: 100%;
+    }
+    .imagen-div {
+        display: none;
+    }
+}

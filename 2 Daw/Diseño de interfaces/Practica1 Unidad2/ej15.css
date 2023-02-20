@@ -1,0 +1,28 @@
+div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.c1 {
+    left: 10px;
+    top: 10px;
+    background-color: red;
+    z-index: 1;
+}
+
+.c2 {
+    left: 20px;
+    top: 20px;
+    background-color: blue;
+    z-index: 2;
+}
+
+.c3 {
+    left: 30px;
+    top: 30px;
+    background-color: green;
+    z-index: 3;
+}

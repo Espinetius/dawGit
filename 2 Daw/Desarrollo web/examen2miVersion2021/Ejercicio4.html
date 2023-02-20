@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function abrir() {
+            sessionStorage.setItem("color_fondoss",document.getElementById("colorete").value);
+            sessionStorage.setItem("textoss",document.getElementById("areaTexto").value);
+            window.open("ficha.html", '_blank');
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="abrir()">
+        <div>
+            <label for="colorete">Color de fondo:</label>
+            <input type="color" id="colorete" name="colorete" required><br>
+        </div>
+        <div>
+            <label for="areaTexto">Texto a escribir:</label>
+            <textarea id="areaTexto" placeholder="Escribe el texto que quieras..."></textarea>
+        </div>
+        <div>
+            <input type="submit" value="abrir ventana">
+        </div>
+    </form>
+</body>
+
+</html>

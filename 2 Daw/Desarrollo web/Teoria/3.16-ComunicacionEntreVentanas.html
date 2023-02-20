@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+</head>
+<body>
+	<script>
+		var ventanaSecundaria = window.open("","ventanaSec","width=500,height=500"); 
+	</script>
+	<center><h1> Comunicaci&oacute;n entre ventanas </h1>
+	<br>
+	<form name=formulario>
+		<input type=text name=url size=50 value="http://www.">
+		<input type=button value="Mostrar URL en ventana secundaria" onclick=" 
+		ventanaSecundaria.location = document.formulario.url.value;">
+	</form> 
+	</center>
+</body>
+</html>
+

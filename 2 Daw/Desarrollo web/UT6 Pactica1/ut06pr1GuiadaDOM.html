@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		
+        img {
+            float: left;
+        }
+
+	</style>
+    <script>
+        window.addEventListener("load",inicio);
+        function inicio (){
+            let contador= 1;
+            for (contador=1;contador<4;contador++){
+            Encabezado(contador);
+            }
+            Imagen();
+        }
+
+        function Encabezado(contador)
+        {
+			var encabezado = document.createElement("h2");
+			var texto = document.createTextNode("TÍTULO - " + contador);
+			contador++;
+			encabezado.appendChild(texto);
+			document.getElementById("caja2").appendChild(encabezado);
+		}
+
+        function Imagen (){
+        	var imagen = document.createElement("img");
+        	imagen.setAttribute("src","imagenes/js.png");
+        	imagen.setAttribute("alt","javascript");
+        	cont = document.getElementById("caja1");
+        	cont.appendChild(imagen);
+        }
+    </script>
+
+</head>
+    <body>
+       <H1>Práctica guiada. Introducción a DOM </H1>
+        <div id=caja1>  </div>
+        <div id=caja2>  </div>
+    </body>
+</html>

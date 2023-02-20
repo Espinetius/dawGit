@@ -1,0 +1,21 @@
+table {
+ border:1px black solid;
+ border-radius:5px;
+ min-width:400px;
+ font-family: Helvetica,Arial;
+}
+table th {
+ background: lightgoldenrodyellow;
+}
+
+table tr:nth-child(2n) {
+ background: whitesmoke;
+}
+ 
+table tr:nth-child(2n+1){
+ background: white;
+}
+ 
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+ background:white;
+}

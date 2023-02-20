@@ -1,0 +1,101 @@
+.juego {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja {
+    position: relative;
+}
+
+img {
+    border: 2px dotted black;
+    width: 180px;
+    height: 180px;
+}
+
+@keyframes movimiento {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ficha {
+    height: 25px;
+    width: 25px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    color: white;
+    animation: movimiento 2s normal;
+}
+
+.botones {
+    margin-top: 2%;
+    height: 100%;
+}
+
+#ficha1 {
+    background-color: aqua;
+    top: 10%;
+    left: 10%;
+}
+
+#boton1 {
+    background-color: aqua;
+}
+
+#ficha2 {
+    background-color: blue;
+    top: 12%;
+    left: 52%;
+}
+
+#boton2 {
+    background-color: blue;
+}
+
+#ficha3 {
+    background-color: brown;
+    top: 60%;
+    left: 10%;
+}
+
+#boton3 {
+    background-color: brown;
+}
+
+#ficha4 {
+    background-color: blueviolet;
+    top: 62%;
+    left: 40%;
+}
+
+#boton4 {
+    background-color: blueviolet;
+}
+
+.botonDado {
+    background-color: darkblue;
+    color: chartreuse;
+    margin-top: 5px;
+    width: 100px;
+    height: 60px;
+}

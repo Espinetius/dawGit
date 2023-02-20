@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<title>Ejemplo de utilización de webStorage con JavaScript</title>
+<style type="text/css">
+/* Estilos concretos para esta página */
+.instrucciones { margin: 0px; text-align: right; font-style: italic; font-size: 90%; }
+.codigo { width: 100%; background-color: #F8F8F8; font-family: 'Courier New'; }
+textarea.codigo { font-size: 90%; /*white-space: nowrap;*/ cursor: pointer; }
+#consola, #resultado { float: left; border: 1px solid grey; margin: 5px; padding: 20px; width: 45%; min-height: 10em; background-color: white; }
+</style>
+<script type="text/JavaScript">
+var mensaje ="<p style='text-align: center;'><b>CONSOLA</b></p><p>Vemos las acciones que se realizarán al hacer click en los botones y el incremento del contador </p>"; // Los mensajes que se irán mostrando en el DIV consola
+var visitas = 0; // Para leer y escribir en webStorage el número de visitas a esta página
+var color_fondo; // Para leer y escribir en webStorage el color de fondo del DIV resultado
+var color_texto; // Para leer y escribir en webStorage el color de texto del DIV resultado
+function empezamos()
+{
+	// Esta función se carga con onload
+	// Comprobamos si el navegador admite webStorage (localStorage o sessionStorage) y 
+	// se escribe en el div consola el mensaje correspondiente
+}
+function leer()
+{
+	// Leemos los datos de webStorage
+	// Indicando los valores de color_fondo y color_texto en el div consola
+	document.getElementById("consola").innerHTML="<h3>CONSOLA</h3>";
+	if(localStorage.getItem("color_fondols") == null){
+		texto1=document.createTextNode("El color del fondo no se ha guardado en localStorage");
+		linea1=document.createElement("p");
+		linea1.appendChild(texto1);
+		document.getElementById("consola").appendChild(linea1);
+	}else{
+		texto1=document.createTextNode("El color del fondo en localStorage es: "+localStorage.getItem("color_fondols"));
+		linea1=document.createElement("p");
+		linea1.appendChild(texto1);
+		document.getElementById("consola").appendChild(linea1);
+	}
+	if(localStorage.getItem("color_textols") == null){
+		texto2=document.createTextNode("El color del texto no se ha guardado en localStorage");
+		linea2=document.createElement("p");
+		linea2.appendChild(texto2);
+		document.getElementById("consola").appendChild(linea2);
+	}else{
+		texto2=document.createTextNode("El color del texto en localStorage es: "+localStorage.getItem("color_textols"));
+		linea2=document.createElement("p");
+		linea2.appendChild(texto2);
+		document.getElementById("consola").appendChild(linea2);
+	}
+	// Incrementando el contador  y mostrándolo
+	if(visitas==0){
+		texto3=document.createTextNode("Las visitas estan a "+visitas);
+		document.getElementById("consola").appendChild(texto3);
+	}else{
+		texto3=document.createTextNode("El número de visitas es: "+visitas);
+		document.getElementById("consola").appendChild(texto3);
+	}
+	visitas++;
+	// Se informará también si no se han creado los webStorage aún y si no se ha incrementado el contador	
+}
+function fondo(color)
+{
+	// Guardamos el color de fondo pedido e informamos del cambio en el div consola
+    /* visitas++; */
+    localStorage.setItem("color_fondols", color);
+    document.getElementById("resultado").style.backgroundColor=localStorage.getItem("color_fondols");
+    document.getElementById("consola").innerHTML="<h3>CONSOLA</h3><br>El color de fondo se ha cambiado a: "+color;
+}
+function texto(color)
+{
+	localStorage.setItem("color_textols", color);
+	document.getElementById("resultado").style.color=localStorage.getItem("color_textols");
+	document.getElementById("consola").innerHTML="<h3>CONSOLA</h3><br>El color del texto se ha cambiado a: "+color;
+	// Guardamos el color de texto pedido e informamos del cambio en el div consola
+}
+function contador(valor)
+{
+	// Pone el contador a cero e informamos del cambio en el div consola
+	visitas=valor;
+	document.getElementById("consola").innerHTML="<h3>CONSOLA</h3><br>El contador se ha puesto a: "+visitas;
+}
+function borrar()
+{
+	// Borramos los datos de webStorage. Informamos del cambio en el div consola 
+	// Dejamos en el div resultado los colores de fondo y fuente iniciales
+	document.getElementById("consola").innerHTML="<h3>CONSOLA</h3><br>Se han borrado los datos de localStorage";
+	localStorage.clear();
+	document.getElementById("resultado").style.backgroundColor="white";
+	document.getElementById("resultado").style.color="black";
+}
+function abrir()
+//abrimos la  ventana ejemplo.html para ver que el webStorage se conserva.
+{
+	window.open ("ejemplols.html", '_blank')
+}
+//-->
+</script>
+</head>
+<body onload="empezamos();">
+<main>
+	<div id="div_contenido">
+		<h2>Ejemplo completo de webStorage con JavaScript</h2>
+		<div id="consola">
+			<p style='text-align: center;'><b>CONSOLA</b></p>
+			<p> Aquí irás viendo las acciones que se van realizando al hacer click en los botones </p>
+			<p> Así como el incremento del contador </p>
+        </div>
+		<div id="resultado">
+			<!-- Inicialmente no mostramos este DIV porque no sabemos si el navegador admite webStorage -->
+			<p style='text-align: center;'><b>RESULTADO</b></p>
+			<p>Aquí irás viendo los cambios resultantes de la lectura/escritura en webStorage.</p>
+			<p>que son color_fondo y color_texto <p>
+			<p>Inicialmente, este DIV tiene el fondo blanco y el texto negro.</p>
+		</div>
+		<hr style="clear: both;">
+		<div id ="botones">
+			<!-- Inicialmente no mostramos este DIV porque no sabemos si el navegador admite webStorage -->
+			<input type="button" value="Leer localStorage" onclick="leer();">
+			<input type="button" value="Abrir pestaña" onclick="abrir();">
+
+			<input type="button" value="Fondo amarillo" onclick="fondo('yellow');">
+			<input type="button" value="Fondo rosa" onclick="fondo('pink');">
+			<input type="button" value="Texto verde" onclick="texto('green');">
+			<input type="button" value="Texto azul" onclick="texto('blue');">
+			<p>Cada vez que pinchas "Leer webStorage" se hacen visibles los cambios y se incrementa  el contador. Simula una recarga de la página.</p>
+			<input type="button" value="Contador a cero" onclick="contador(0);">
+			<input type="button" value="Borrar el localStorage" onclick="borrar();">
+			<p>Si cierras esta página sin borrar el <strong>webStorage</strong> y vuelves a entrar con el mismo navegador, verás que te conserva los valores que hayas establecido.<br/>
+				Pero si entras con otro navegador, el <strong>webStorage</strong> estará vacío. Pruébalo</p>
+		</div>
+		<hr>
+	</div>
+</main>
+</body>
+</html>

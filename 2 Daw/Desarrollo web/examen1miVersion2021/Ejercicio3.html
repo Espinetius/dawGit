@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            oradores = ["Pedro Garcia", "Rosa Perez"];
+        }
+        function añadir(){
+            alumno = prompt("Escribe nombre, apellidos", "alvaro rame");
+            array = alumno.split(" ");
+            arrayElement=new Array();
+            //array=[alvaro,rame];
+            array.forEach(element => {
+                arrayElement.push(element.charAt(0).toUpperCase()+element.slice(1));
+            });
+            /*for (i = 0; i < 2; i++) {
+                array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+            }*/
+            alumno = arrayElement.join(" "); //Alvaro Rame
+            oradores.push(alumno);
+        }
+        function imprimir() {
+            coinciden = "";
+            oradores.forEach(element => {
+                    //uso el \n en vez de <br> porque el alert no lee <br>
+                    coinciden += `${element} \n`
+            });
+                alert(`${coinciden}\nALUMNO SELECCIONADO:${oradores[Math.trunc(Math.random() * oradores.length)]}`);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="añadir()">Añadir</button>
+    <button onclick="imprimir()">Imprimir Listado</button>
+</body>
+
+</html>

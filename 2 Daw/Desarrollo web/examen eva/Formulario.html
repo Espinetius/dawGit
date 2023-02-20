@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Ejercicio 4
+</title>
+<script type="text/javascript">
+    window.addEventListener('load',iniciar);
+    function iniciar(){
+        document.getElementById('abrir').addEventListener('click',abrirV)
+    }
+    function abrirV(){
+        sessionStorage.setItem('color',document.getElementById('color').value);
+        sessionStorage.setItem('texto',document.getElementById('texto').value);
+        alert(sessionStorage.getItem('color'));
+        window.open ("ficha.html", '_blank');
+    }
+</script>
+</head>
+<body>
+    <form id="formulario" method="post" action="#" >
+        Color de fondo: <input id='color' type='color'/><br/>
+        Texto a escribir: <textarea id='texto' cols=20 rows=2></textarea><br/>
+        <input id='abrir' type='button' value='abrir ventana'/>
+    </form>
+</body>
+</html>

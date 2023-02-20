@@ -1,0 +1,20 @@
+﻿[
+{
+    "nombre":"Alfredo",
+    "edad":12,
+    "mascotas":[
+        { "animal":"pájaro", "name":"Mordiscos" },
+        { "animal":"perro", "name":"Papelon" },
+        { "animal":"gato", "name":"Duna" }
+    ]
+},
+{
+    "nombre":"Pedro",
+    "edad":41,
+    "mascotas":[
+        { "animal":"rata", "name":"Bobito" },
+        { "animal":"Pez", "name":"Kevin" }
+    ]
+}
+]
+

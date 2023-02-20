@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .micolor {
+            color: pink;
+        }
+        
+        .bgcolor {
+            background-color: black;
+        }
+    </style>
+    <script>
+        //window.onload = inicio;
+        //Métodos para crear elementos en DOM
+        //Crear encabezado y crear imagen
+        //Modificar atributos con setAttribute
+        window.addEventListener("load", inicio);
+        let contador = 1;
+
+        function inicio() {
+
+            document.getElementById("btn1").addEventListener("click", Encabezado);
+            document.getElementById("btn2").addEventListener("click", Imagen);
+
+        }
+
+        function Encabezado() {
+            var encabezado = document.createElement("h2");
+            var texto = document.createTextNode("SALUDOSSS!!! - " + contador);
+            contador++;
+            encabezado.appendChild(texto);
+            document.getElementById("caja1").appendChild(encabezado);
+        }
+
+        function Imagen() {
+            var imagen = document.createElement("img");
+            imagen.setAttribute("src", "imagenes/js5.png");
+            imagen.setAttribute("alt", "javascript 5");
+            cont = document.getElementById("caja2");
+            cont.appendChild(imagen);
+        }
+    </script>
+
+</head>
+
+<body>
+    <p id="parrafo1">Primer párrafo</p>
+    <p id="parrafo2" class="micolor">Segundo párrafo</p>
+    <div id=caja1> </div>
+    <div id=caja2> </div>
+
+
+    <button id="btn1">Encabezado </button>
+    <button id="btn2">Imagen </button>
+
+</body>
+
+</html>

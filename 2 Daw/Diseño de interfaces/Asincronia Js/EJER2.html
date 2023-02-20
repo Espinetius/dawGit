@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        
+        td {
+            border: 1px dotted grey;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <input type="button" id="boton" value="Carga de catalogo">
+    <table id="cat"></table>
+</body>
+<script>
+    boton = document.getElementById("boton");
+    boton.addEventListener("click", cargaCat);
+
+    function cargaCat() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "./catalogo.xml", true);
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                procesarXML(this);
+            }
+        };
+        xhr.send();
+    }
+
+    function procesarXML(xml) {
+        var docXML = xml.responseXML;
+        var catalogo = docXML.getElementsByTagName("CATALOG");
+        var cd = catalogo[0].getElementsByTagName("CD");
+        document.getElementById("cat").innerHTML += "<td>TITLE</td><td>ARTIST</td><td>COUNTRY</td><td>PRICE</td><td>YEAR</td>";
+        for (i = 0; i < cd.length; i++) {
+            document.getElementById("cat").innerHTML += "<td>" + cd[i].getElementsByTagName("TITLE")[0].textContent + "</td><td>" + cd[i].getElementsByTagName("ARTIST")[0].textContent + "</td><td>" + cd[i].getElementsByTagName("COUNTRY")[0].textContent + "</td><td>" + cd[i].getElementsByTagName("PRICE")[0].textContent + "</td><td>" + cd[i].getElementsByTagName("YEAR")[0].textContent + "</td>";
+        };
+    }
+</script>
+
+</html>

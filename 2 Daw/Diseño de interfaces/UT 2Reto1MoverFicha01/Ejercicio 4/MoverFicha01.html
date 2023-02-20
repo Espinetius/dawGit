@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MoverFicha01.css">
+    <title>Colocar Ficha</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Llegue hasta el final!</h1>
+    <ul id="lista">
+        <li>Debe de tirar el dado primero y seleccione la ficha a mover</li>
+        <li>Llegue al final sin pasarse en la tirada!</li>
+    </ul>
+    <div class="juego">
+        <div class="caja" id="1">
+            <img src="zanahoria.JPG" alt="">
+            <div class="ficha" id="ficha3"> 3 </div>
+            <div class="ficha" id="ficha1"> 1 </div>
+            <div class="ficha" id="ficha2"> 2 </div>
+            <div class="ficha" id="ficha4"> 4 </div>
+        </div>
+        <div class="caja" id="2">
+            <img src="piratas.jpg" alt="">
+        </div>
+        <div class="caja" id="3">
+            <img src="PalomaSinFondo-576x1024.png" alt="">
+        </div>
+        <div class="caja" id="4">
+            <img src="zanahoria.JPG" alt="">
+        </div>
+
+        <div class="caja" id="5">
+            <img src="piratas.jpg" alt="">
+        </div>
+        <div class="caja" id="6">
+            <img src="PalomaSinFondo-576x1024.png" alt="">
+        </div>
+        <div class="caja" id="7">
+            <img src="zanahoria.JPG" alt="">
+        </div>
+
+        <div class="caja" id="8">
+            <img src="piratas.jpg" alt="">
+        </div>
+        <div class="caja" id="9">
+            <img src="PalomaSinFondo-576x1024.png" alt="">
+        </div>
+        <div class="caja" id="10">
+            <img src="zanahoria.JPG" alt="">
+        </div>
+    </div>
+    <div class=" botones" id="botones">
+        <button id="boton1">Mover ficha 1</button>
+        <button id="boton2">Mover ficha 2</button>
+        <button id="boton3">Mover ficha 3</button>
+        <button id="boton4">Mover ficha 4</button>
+    </div>
+    <div>
+        <button class="botonDado" id="dado">CLick para tirar dado</button>
+        <p id="mensajeFinal"></p>
+    </div>
+
+</body>
+<script>
+    window.addEventListener("load", inicioPartida);
+
+    function inicioPartida() {
+
+        ficha1 = document.getElementById("ficha1");
+        ficha2 = document.getElementById("ficha2");
+        ficha3 = document.getElementById("ficha3");
+        ficha4 = document.getElementById("ficha4");
+        dado = document.getElementById("dado");
+        fin = document.getElementById("caja10");
+        botonF1 = document.getElementById("boton1");
+        botonF2 = document.getElementById("boton2");
+        botonF3 = document.getElementById("boton3");
+        botonF4 = document.getElementById("boton4");
+        botones = document.getElementsByTagName("button");
+        botonF1.addEventListener("click", moverFicha1);
+        botonF2.addEventListener("click", moverFicha2);
+        botonF3.addEventListener("click", moverFicha3);
+        botonF4.addEventListener("click", moverFicha4);
+        dado.addEventListener("click", tirarDado);
+
+    }
+
+    function mensajeFinal() {
+        document.getElementById("titulo").innerHTML = "FIN DEL JUEGO!";
+        document.getElementById("lista").style.visibility = "hidden";
+        document.getElementById("botones").style.visibility = "hidden";
+        dado.style.visibility = "hidden";
+
+    }
+
+    function tirarDado() {
+        numero = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        this.textContent = numero;
+        this.value = numero;
+    }
+
+    function moverFicha1() {
+        cajadesconocida = ficha1.parentElement;
+        valorInicial = Number(cajadesconocida.getAttribute("id"));
+        cajaFinal = valorInicial + Number(dado.value);
+        if (cajadesconocida.getAttribute("id") != fin) {
+            document.getElementById(cajaFinal).appendChild(ficha1);
+        }
+        if (cajaFinal == 10) {
+            mensajeFinal();
+        }
+
+
+    }
+
+    function moverFicha2() {
+        cajadesconocida = ficha2.parentElement;
+        valorInicial = Number(cajadesconocida.getAttribute("id"));
+        cajaFinal = valorInicial + Number(dado.value);
+        if (cajadesconocida.getAttribute("id") != fin) {
+            document.getElementById(cajaFinal).appendChild(ficha2);
+        }
+        if (cajaFinal == 10) {
+            mensajeFinal();
+        }
+
+    }
+
+    function moverFicha3() {
+        cajadesconocida = ficha3.parentElement;
+        valorInicial = Number(cajadesconocida.getAttribute("id"));
+        cajaFinal = valorInicial + Number(dado.value);
+        if (cajadesconocida.getAttribute("id") != fin) {
+            document.getElementById(cajaFinal).appendChild(ficha3);
+        }
+        if (cajaFinal == 10) {
+            mensajeFinal();
+        }
+
+    }
+
+    function moverFicha4() {
+        cajadesconocida = ficha4.parentElement;
+        valorInicial = Number(cajadesconocida.getAttribute("id"));
+        cajaFinal = valorInicial + Number(dado.value);
+        if (cajadesconocida.getAttribute("id") != fin) {
+            document.getElementById(cajaFinal).appendChild(ficha4);
+        }
+        if (cajaFinal == 10) {
+            mensajeFinal();
+        }
+
+    }
+</script>
+
+</html>

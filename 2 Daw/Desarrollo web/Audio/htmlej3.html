@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        audio {
+            width: 115px;
+            height: 25px;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            -webkit-justify-content: center;
+            height: 25px;
+        }
+        /* Removes the timeline */
+        
+        audio::-webkit-media-controls-timeline {
+            display: none !important;
+        }
+        /* Removes the time stamp */
+        
+        audio::-webkit-media-controls-current-time-display {
+            display: none;
+        }
+        
+        audio::-webkit-media-controls-time-remaining-display {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls>
+        
+        <source src="./audio/cancion1.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    <audio controls>
+        <source src="./audio/cancion3.wav" type="audio/wav">
+        Your browser does not support the audio tag.
+      </audio>
+    <audio controls>
+        <source src="./audio/cancion2.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+
+</body>
+
+</html>

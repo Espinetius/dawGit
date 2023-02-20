@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        input {
+            width: 200px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    <form>
+        <label for="edad">Selecciona si eres mayor de edad</label><br>
+        <input type="radio" name="edad" id="mayor">Mayor de edad<br>
+        <input type="radio" name="edad" id="Menor">Menor de edad<br>
+        <label for="pass">Introduzca
+             su contraseña</label>
+        <input type="password" name="pass" placeholder="Introduzca contraseña aqui" id="pass"><br>
+        <label for="passconfirm">Confirme la contraseña</label>
+        <input type="password" name="passconfirm" placeholder="Introduzca contraseña de nuevo" id="passconfirm"><br>
+        <p id="nomachpass" style="visibility: hidden; color: red;">Las contraseñas no coinciden</p>
+        <input id="enviar" type="submit"></input>
+    </form>
+    <h2>Ejercicio 2</h2>
+    <form>
+        <textarea name="ej2" id="ej2" cols="80" rows="10" maxlength="100" onkeyup="textareaEj2(this);"></textarea>
+        <p id="mensajeEj2">Aun puedes escribir 100 caracteres de 100 caracteres</p>
+    </form>
+    <h2>Ejercicio 3</h2>
+    <form>
+        <label for="name">Nombre y apellidos*</label><br>
+        <input type="text" id="name" required placeholder="Nombre y apellidos"><br>
+        <label for="titActi">Titulo de la actividad*</label><br>
+        <input type="text" id="titActi" required placeholder="Titulación"><br>
+        <label for="pass">Contraseña*</label><br>
+        <input type="password" id="pass" required placeholder="Password"><br>
+        <label for="colorFondo">Color de Fondo</label><br>
+        <input type="color" id="colorFondo"><br>
+        <label for="fechDip">Fecha del diploma*</label><br>
+        <input type="date" id="fechaDip"><br>
+        <label for="caliActi">Calificación de la actividad</label><br>
+        <input type="number" id="caliActi"><br>
+        <label for="alumno">¿Eres alumno del centro?</label><br>
+        <input type="radio" name="alumno" value="Si">Si
+        <input type="radio" name="alumno" value="No">No<br>
+        <label for="email">Correo electronico</label><br>
+        <input type="email" id="mail" name="email" placeholder="Correo electronico"><br>
+        <label for="valCurso">Valoracion del curso</label><br>
+        <input type="range" id="valCurso">
+        <p>Calificacion: </p><br>
+        <label for="conditions">Aceptas condiciones del diploma?</label><br>
+        <input type="checkbox" name="conditions">Si
+        <input type="checkbox" name="conditions">No<br>
+        <input type="button" name="botonDiploma" id="botonDiploma" value="Enviar" onclick="certificadoEj3()">
+    </form>
+</body>
+<script src="js.js"></script>
+
+</html>

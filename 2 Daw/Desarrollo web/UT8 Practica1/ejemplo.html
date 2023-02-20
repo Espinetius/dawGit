@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ejemplo.html</title>
+		<!--<link rel="stylesheet" href="css/main.css" type="text/css">-->
+		<style>            
+		</style>
+		<script>   
+
+			function probar (){
+				window.document.body.style.backgroundColor = localStorage["color_fondo"];
+				window.document.getElementById("parrafo").style.color = localStorage["color_texto"];
+			}
+
+		</script>       
+	</head>
+	<body>
+		<h1> EJEMPLO DE WEBSTORAGE </h1>
+		<p id="parrafo"> vamos a comprobar si se cambia el texto de este párrafo y el fondo del body accediendo a webstorage. Pulsa el botón para comprobarlo </p>
+		<input type="button" value="Leer localStorage" onclick="probar();">
+
+	</body>
+</html>

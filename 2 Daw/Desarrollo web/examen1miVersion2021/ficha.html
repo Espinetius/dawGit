@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Ejercicio 4</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            color_letra = localStorage["color_letrals"];
+            tletra = localStorage["tletrals"];
+            nombre=localStorage["nombrels"];
+            if (nombre == "" || nombre == undefined) {
+                alert("No se han registrado datos");
+                window.close();
+            } else {
+                window.document.getElementById("parrafo").innerHTML = "Hola "+nombre;
+                window.document.getElementById("parrafo").style.color=color_letra;
+                window.document.getElementById("parrafo").style.fontSize=tletra+"px";
+                fecha = new Date();
+                window.document.getElementById("fecha").innerHTML = "Son las "+fecha.getHours()+" y "+fecha.getMinutes()+" minutos"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="parrafo"></div>
+    <div id="fecha"></div>
+    <div>
+        <button onclick="localStorage.clear()">Borrar Webstorage</button>
+    </div>
+</body>
+
+</html>

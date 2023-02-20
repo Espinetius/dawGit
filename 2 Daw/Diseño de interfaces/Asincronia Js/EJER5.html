@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <button id="cargar">Cargar</button>
+    <div id="caja">
+
+    </div>
+</body>
+<script>
+    document.getElementById("cargar").onclick = cargar;
+
+    function cargar() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "ActivBibliotecas.json", true);
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                cargarJSON(this);
+            }
+        };
+
+        xhr.send();
+    }
+
+    function cargarJSON(json) {
+        var myObj = JSON.parse(json.responseText);
+        nombres = Object.keys(myObj); // genera un array con el nombre de las propiedades del objeto
+
+        for (var i = 0; i < myObj["@graph"].length; i++) {
+            document.getElementById("caja").innerHTML += "<strong>" + myObj["@graph"][i]["title"] + "</strong> --- " + myObj["@graph"][i]["event-location"] + "<br><br>";
+        }
+
+    }
+</script>
+
+</html>

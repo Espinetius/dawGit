@@ -1,0 +1,23 @@
+p::first-line {
+    color: red;
+}
+
+p::first-letter {
+    text-transform: capitalize;
+    color: black;
+    font-size: 80px;
+    float: inline-start;
+}
+
+p::selection {
+    background-color: yellow;
+}
+
+h1::after {
+    background-image: url(../icono-de-la-estrella-en-un-diseño-plano-ilustración-del-vector-132468863.jpg);
+    background-size: 30px 30px;
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+}

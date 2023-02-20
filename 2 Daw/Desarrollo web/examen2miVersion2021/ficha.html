@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Ejercicio 4</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            color_fondo = sessionStorage["color_fondoss"];
+            texto = sessionStorage["textoss"];
+            if (texto == "" || texto==undefined) {
+                alert("No se han registrado datos");
+                window.close();
+            } else {
+                window.document.body.style.backgroundColor = color_fondo;
+                window.document.getElementById("parrafo").innerHTML = texto;
+                fecha = new Date();
+                window.document.getElementById("fecha").innerHTML = fecha.toLocaleDateString();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="parrafo"></div>
+    <div id="fecha"></div>
+    <div>
+        <button onclick="sessionStorage.clear()">Borrar Webstorage</button>
+        <button onclick="window.print()">Imprimir</button>
+        <button onclick="window.close()">Cerrar</button>
+    </div>
+</body>
+
+</html>

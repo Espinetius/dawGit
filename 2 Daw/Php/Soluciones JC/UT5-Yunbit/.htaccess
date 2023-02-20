@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# Sintaxis
+# RewriteRule ^url-amigable$ url-no-amigable.php?parametro=$1
+
+# «^» es el inicio de una expresión regular para definir el patrón de URL amigable
+# «producto» es una serie de caracteres que figurarán en toda URL que se desee redirigir.
+# «/» hay un separador de barra 
+# «([0-9]+)» es un patrón que indica que una repetición de 1 o más digitos.
+# «$» es el final del patrón.
+
+# El $1 es un parámetro que se corresponde con el patrón [0-9]+
+
+RewriteRule ^producto/([0-9]+)$ detalle.php?id=$1
+

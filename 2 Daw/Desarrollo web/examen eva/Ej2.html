@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Ejercicio 2
+</title>
+<script type="text/javascript">
+    window.addEventListener('load',iniciar);
+    function iniciar(){
+        nombres=["Pedro García","Rosa Jimenez","Jimena Ruiz","Sara Robles"];
+        document.getElementById('nombres').innerHTML=nombres.toString();
+        document.getElementById('buscar').addEventListener('click',buscar);
+    }
+    function buscar(){
+        var lista="";
+        i=0;
+        nombres.forEach(element => {
+            if((element.toUpperCase().search(document.getElementById('busqueda').value.toUpperCase())!=-1)){
+                lista+="\n"+element;
+                nombres[i]=element;
+                i++;
+            }
+        });
+        if(lista==""){
+            lista+="\n--NINGUNO--";
+        }else{
+            lista+="\n--ELEMENTO SELECCIONADO: ";
+            lista+=nombres[Math.trunc(Math.random()*i)];
+        }
+        alert("Elementos encontrados que cumplen la condicion de busqueda: "+lista);
+    }
+</script>
+</head>
+<body>
+    <h1>BUSCAR CADENA EN LISTA</h1>
+    <h3 id='nombres'></h3>
+    <form id="formulario" method="post" action="#" >
+       Cadena a buscar: <input id='busqueda' type='text'/>
+        <input id='buscar' type='button' value='Enviar' />
+    </form>
+</body>
+</html>

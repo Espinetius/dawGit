@@ -1,0 +1,55 @@
+[{
+    "tipo": "Ordenadores Completos",
+    "nombre": "PC sobremesa",
+    "descripcion": "PC de sobremesa ya montado con componentes 'gaming'. Tiene componentes variados como una Targeta gráfica nvidia 2070, refrigeración liquida Corsair HI110, placa base ASUSROCK, Targeta ram hyperx de 16 GB, y mas componentes variados.",
+    "foto": "sobremesa.jpeg",
+    "precio": 1500
+}, {
+    "tipo": "Ordenadores Completos",
+    "nombre": "PC portatil ASUS K541UV-XX335T ",
+    "descripcion": "Los portátiles de la serie X de Asus están diseñados para ofrecerte una experiencia multimedia envolvente. Las tecnologías de Asus, como el sistema de audio SonicMaster, que incluye la tecnología ICEpower, Asus Splendid y el sistema de vídeo ASUS Tru2Life, dan vida a tus películas y canciones.",
+    "foto": "portatil.jpeg",
+    "precio": 700
+}, {
+    "tipo": "Fuentes de alimentación",
+    "nombre": "BitFenix Formula 750W 80 Plus Gold",
+    "descripcion": "Le presentamos la línea más reciente de fuentes de alimentación BitFenix ​​que presume de una calidad extrema y el mejor rendimiento del mundo con más de 80 Gold de eficiencia y hasta un 92% de eficiencia en la carga típica. La nueva línea de fuente de alimentación BitFenix ​​Formula Gold viene con una amplia gama de opciones de energía que comienzan con 450W hasta llegar a 750W incrementando en 100W.",
+    "foto": "FuentealimentacionGold.jpeg",
+    "precio": 92.50
+}, {
+    "tipo": "Tarjetas RAM",
+    "nombre": "Targeta RAM HyperX",
+    "descripcion": "HyperX® FURY DDR4 detecta los componentes de tu sistema y se realiza automáticamente el overclocking a la frecuencia publicada más alta, hasta 3466 MHz, para lograr un aumento del rendimiento Plug & Play. Esta rentable actualización te permitirá aumentar la configuración de tus favoritos de FPS, MMO y MOBA, así como disfrutar de un mejor rendimiento de renderización y edición de vídeos. Está disponible en velocidades de entre 2400 MHz y 3466 MHz, latencias de CL15 a CL19, y capacidades de módulo único de 4 GB a 16 GB, y capacidades en kit de 16 GB a 64 GB. HyperX FURY DDR4 se encuentra y permanece fría gracias a su disipador de calor elegante y de bajo perfil y el bajo consumo energético de 1,2 V de la memoria DDR4. Probada al 100 % a elevadas velocidades y respaldada por una garantía de por vida, la memoria HyperX FURY DDR4 es tu opción de actualización sin preocupaciones. La memoria HyperX PnP funcionará con casi todos los sistemas DDR4 hasta la velocidad que permita la BIOS del sistema del fabricante. PnP no puede aumentar la velocidad de memoria del sistema más allá de lo que permite el BIOS del fabricante.",
+    "foto": "ram1.jpeg",
+    "precio": 45.00
+}, {
+    "tipo": "Placas Bases",
+    "nombre": "Placa base ASUS",
+    "descripcion": "Esta placa base es una placa del instituto, no poseo mucha informacion sobre ella. Se puede añadir al carrito y añadir a la cesta, aunque no tenga precio",
+    "foto": "placa.jpeg",
+    "precio": 0
+}, {
+    "tipo": "Tarjetas Gráficas",
+    "nombre": "GIGABYTE GEFORCE RTX 2070 GAMING OC 8GB GDDR6",
+    "descripcion": "Las tarjetas gráficas GeForce RTX utilizan la tecnología de la arquitectura Turing y la nueva plataforma gráfica RTX. Esto proporciona hasta el séxtuple de rendimiento que las tarjetas gráficas de la anterior generación y lleva la potencia del trazado en tiempo real y la inteligencia artificial a los juegos.",
+    "foto": "158848.png",
+    "precio": 606.50
+}, {
+    "tipo": "Procesadores",
+    "nombre": "Procesador Intel 486",
+    "descripcion": "País/Región de fabricación: Desconocido<br> Tipo de procesador: 80486 <br>Número de núcleos: 1 <br> Velocidad del bus:  66 MHz",
+    "foto": "procesadorintel486-2.jpeg",
+    "precio": 62
+}, {
+    "tipo": "Procesadores",
+    "nombre": "Procesador Ryzen7",
+    "descripcion": "Tecnología AMD StoreMI: Software que combina la velocidad de SSD con la capacidad de disco duro en una sola unidad rápida y fácil de administrar, gratuita con la placa madre AMD Serie 400. Utilidad AMD Ryzen™ Master: La utilidad de overclocking sencilla y a la vez potente para los procesadores AMD Ryzen™§. AMD Ryzen™ VR - Ready Premium: Para los usuarios que exigen una experiencia premium de realidad virtual. AMD ofrece procesadores especiales Ryzen™ VR - Ready Premium de alto rendimiento.",
+    "foto": "ProcesadorRyzen7.jpeg",
+    "precio": 279.40
+}, {
+    "tipo": "Tarjetas RAM",
+    "nombre": "Ram Corsair Vengeance Pro",
+    "descripcion": "La placa de circuito impreso de alto rendimiento VENGEANCE RGB PRO Series cuenta con un diseño personalizado y se ha sometido a diversas pruebas para no comprometer el estilo ni la velocidad. Se ha optimizado para proporcionar un rendimiento de alta frecuencia en las placas baseq DDR4 AMD e Intel® más recientes. Cada módulo se ha diseñado con circuitos integrados seleccionados cuidadosamente para conseguir un potencial de overclocking ampliado.",
+    "foto": "ramCrosair.jpeg",
+    "precio": 60.99
+}]

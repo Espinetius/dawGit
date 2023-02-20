@@ -1,0 +1,59 @@
+.juego {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.caja {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border: 2px dotted black;
+}
+
+
+/*@keyframes movimiento {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+*/
+
+.ficha {
+    height: 25px;
+    width: 25px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: white;
+    background-color: red;
+    /*animation: movimiento 0.5 normal;*/
+}
+
+.boton {
+    margin-top: 5%;
+    width: 150px;
+}

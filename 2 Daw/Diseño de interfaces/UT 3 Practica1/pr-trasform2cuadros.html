@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practica de transformacion</title>
+
+    <style type="text/css">
+        #recuadro0 {
+            border-radius: 20px;
+            background-color: #ddd;
+            width: 200px;
+            padding: 10px;
+        }
+        
+        #recuadro1 {
+            position: relative;
+            border-radius: 20px;
+            background-color: #ddd;
+            width: 200px;
+            padding: 10px;
+            transition: transform 4s Respuesta linear 1s;
+        }
+        
+        #recuadro1:hover {
+            rotate: 30deg;
+            left: 100px;
+            top: 30px;
+            scale: 2;
+        }
+        
+        body {
+            background: white;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="recuadro0">
+        <h3>Recuadro 0</h3>
+        <p>Texto del recuadro 0 - De referencia </p>
+    </div>
+    <div id="recuadro1">
+        <h3>Recuadro 1</h3>
+        <p>Texto del recuadro 1 </p>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function crearCookie() {
+            const d = new Date();
+            d.setTime(d.getTime() + (document.getElementById("fecha").value * 24 * 60 * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            document.cookie = document.getElementById("nom").value + "=" + document.getElementById("val").value + ";" + expires;
+        }
+        function borrarCookie(){
+            document.cookie =document.getElementById("nom").value+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        }
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function verCookie() {
+            nombreCookie = prompt("Introduce el nombre de la cookie:", "");
+            valorCookie = getCookie(nombreCookie);
+            if (valorCookie != "") {
+                alert("El valor de "+nombreCookie+" es: "+valorCookie);
+            } else {
+                alert("El valor de "+nombreCookie+" esta vacio");
+            }
+        }
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function verTodas(){
+            alert(document.cookie);
+        }
+        function borrarTodas(){
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                document.cookie =c+"; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>COOKIES</h1>
+    <label for="nom">nombre de la cookie: </label><input id="nom" type="text"><br>
+    <label for="val">valor de la cookie: </label><input id="val" type="text"><br>
+    <label for="fecha">Numero de días para que expire la cookie: </label><input id="fecha" type="text"><br><br>
+    <button onclick="crearCookie()">Crear cookie</button><button onclick="crearCookie()">Modificar cookie</button><button onclick="borrarCookie()">Borrar cookie</button><button onclick="verCookie()">Ver una cookie</button><br><br>
+    <button onclick="verTodas()">Ver todas las cookies</button><button onclick="borrarTodas()">Eliminar todas las cookies</button>
+</body>
+</html>

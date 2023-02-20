@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            oradores = ["Pedro Garcia", "Rosa Jimenez", "Jimena Ruiz", "Sara Robles"];
+            //lo normal sería usar esto, que es lo que hemos dado, pero no sale igual que en el enunciado
+            document.getElementById("nombres").innerHTML = `${oradores.toString()}`
+            //con esto saldría igual que en el enunciado, o si no metiéndole los corchetes y espacios a mano
+            //document.getElementById("nombres").innerHTML=JSON.stringify(oradores);
+        }
+
+        function buscar() {
+            coinciden = "";
+            aleatorio= new Array;
+            busqueda = document.getElementById("busqueda").value;
+            oradores.forEach(element => {
+                if (element.toUpperCase().indexOf(busqueda.toUpperCase()) != -1) {
+                    //uso el \n en vez de <br> porque el alert no lee <br>
+                    coinciden += `${element} \n`
+                    aleatorio.push(element);
+                }
+            });
+            if(coinciden!=""){
+                alert(`Elementos encontrados que cumplen la condición de búsqueda:\n${coinciden}\n--ELEMENTO SELECCIONADO-- ${aleatorio[Math.trunc(Math.random()*aleatorio.length)]}`);
+            }else{
+                alert(`Elementos encontrados que cumplen la condición de búsqueda:\n--NINGUNO--`);
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <h1>BUSCAR CADENA EN LISTA</h1>
+    <p id="nombres"></p>
+    <form action="">
+        Cadena a buscar: <input id="busqueda" type="text"> <button onclick="buscar()">Buscar</button>
+    </form>
+</body>
+
+</html>

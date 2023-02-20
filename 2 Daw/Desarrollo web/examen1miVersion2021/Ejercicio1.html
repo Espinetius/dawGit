@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            lista = document.getElementById("listado");
+            for (i = 0; i < lista.children.length; i++) {
+                lista.children[i].addEventListener("dblclick", eliminar);
+            }
+        }
+
+        function añadir() {
+            alumno = document.getElementById("nombre").value + " - " + document.getElementById("nota").value;
+            if (alumno != null) {
+                nuevoLi = document.createElement("li");
+                nodo = document.createTextNode(alumno);
+                nuevoLi.appendChild(nodo);
+                lista.appendChild(nuevoLi);
+            }
+            colorea();
+        }
+
+        function colorea() {
+            for (i = 0; i < lista.children.length; i++) {
+                if (lista.children[i].innerText.substring(lista.children[i].innerText.length - 2) >= 7) {
+                    lista.children[i].style.color = "red";
+                }
+            }
+        }
+
+        function eliminar() {
+            alert(`Se va a eliminar al alumno ${nombre(this.innerText)}`);
+            lista.removeChild(this);
+            //lista es lo mismo que this.parentNode en este caso.
+        }
+
+        function nombre(e) {
+            arr = e.split(" ");
+            alumno = "";
+            alumno = arr[0] + " " + arr[1];
+            return alumno;
+        }
+
+        function imprimir() {
+            notaMas = 0;
+            alumnadoPro="";
+            for (i = 0; i < lista.children.length; i++) {
+                if (lista.children[i].innerText.substring(lista.children[i].innerText.length - 2) >= notaMas) {
+                    notaMas = lista.children[i].innerText.substring(lista.children[i].innerText.length - 2);
+                }
+            }
+            for (i = 0; i < lista.children.length; i++) {
+                if (lista.children[i].innerText.substring(lista.children[i].innerText.length - 2) == notaMas) {
+                    alumnadoPro+=`${nombre(lista.children[i].innerText)} <br>`; 
+                }
+            }
+            document.getElementById("informacion").innerHTML =
+                `NOTA MÁS ALTA: ${notaMas} <br>
+                ALUMNADO CON NOT MÁS ALTA: <br>
+                ${alumnadoPro}
+            `
+            document.getElementById("formulario").style.display="none";
+            window.print();
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2> LISTADO DE ALUMNOS Y NOTAS FINALES </h2>
+    <ul id="listado">
+        <li>Pedro Garcia - 8 </li>
+        <li>Alberto Blanco - 7 </li>
+        <li>Ana Pérez - 9 </li>
+        <li>Adrian Sanchez - 6 </li>
+        <li>Rosa Perez - 8 </li>
+        <li>Alberto Sanchez - 5 </li>
+    </ul>
+    <div id="formulario">
+        <h2> INSCRIPCIÓN DE ALUMNOS </h2>
+        Nombre y apellidos:<input id="nombre" type="text"><br>
+        Nota final: <input id="nota" type="text"><button onclick="añadir()">Añadir</button><br>
+        <button onclick="imprimir()">Imprimir Listado</button>
+    </div>
+    <div id="informacion"> </div>
+</body>
+
+</html>

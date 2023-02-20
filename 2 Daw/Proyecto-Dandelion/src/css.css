@@ -1,0 +1,133 @@
+* {
+    color: white;
+    font-family: "Brush Script MT", cursive;
+}
+
+html {
+    background-color: black;
+    background-image: url(./../img/bunch-dandelion-seeds-black-background-wallpaper-with-dandelions_619241-359.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    overflow: hidden;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6;
+}
+
+h2 {
+    font-size: 2rem;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6;
+}
+
+h3,
+legend {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-size: small;
+}
+
+a {
+    font-size: medium;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.register {
+    width: 500px;
+    height: 270px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register input {
+    float: right;
+}
+
+.register form {
+    width: 380px;
+}
+
+.register p {
+    width: 500px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    color: black;
+    text-align: center;
+    width: 200px;
+    border-radius: 5%;
+    border: none;
+}
+
+input [type="submit"] {
+    color: white;
+    background-color: grey;
+    width: 100%;
+    border-radius: 5%;
+    border: inset white;
+}
+
+@keyframes hover-boton {
+    20% {
+        background-color: rgb(130, 130, 130);
+    }
+    40% {
+        background-color: rgb(90, 90, 90);
+    }
+    60% {
+        background-color: rgb(50, 50, 50);
+    }
+    80% {
+        background-color: rgb(90, 90, 90);
+    }
+    100% {
+        background-color: rgb(100, 100, 100);
+    }
+}
+
+input[type="submit"]:hover {
+    animation: hover-boton 0.8s ease-in-out both;
+}
+
+.errores {
+    color: red;
+}

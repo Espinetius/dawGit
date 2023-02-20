@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function abrir() {
+            localStorage.setItem("color_letrals", document.getElementById("colorete").value);
+            if (document.getElementById("tletra").value >= 20) {
+                localStorage.setItem("tletrals", document.getElementById("tletra").value);
+            } else {
+                localStorage.setItem("tletrals", 20);
+            }
+            localStorage.setItem("nombrels", document.getElementById("nombre").value);
+            window.open("ficha.html", "_blank");
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="abrir()">
+        <div>
+            Nombre y apellidos: <input id="nombre" type="text">
+        </div>
+        <div>
+            Tamaño letra: <input id="tletra" type="text">Color de la letra:<input type="color" id="colorete"
+                name="colorete">
+        </div>
+        <div>
+            <input type="submit" value="abrir ventana">
+        </div>
+        <br>
+    </form>
+</body>
+
+</html>

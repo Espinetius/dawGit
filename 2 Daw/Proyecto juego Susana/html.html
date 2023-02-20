@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="http://fonts.cdnfonts.com/css/alexandra-signature" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js.js"></script>
+    <title>StoryTeller</title>
+</head>
+
+<body>
+    <header class="centrado separado">
+        <h1>StoryTeller, elige tu propio camino</h1>
+        <nav class="visibilidad" id="menuNav">
+            <a href="html.html" id="menuprincipal">Menu Principal</a>
+            <a id="refresh">Reinicia dia</a>
+            <a href="fin.html" id="finJuego">Cerrar Juego</a>
+        </nav>
+    </header>
+
+    <audio id="audiodrama" src="audios/audio1.mpeg" loop></audio>
+    <audio id="audiopoli" src="audios/audio2.mpeg" loop></audio>
+    <audio id="audiointro" src="audios/audio3.mpeg" loop autoplay></audio>
+    <div class="fondo centrado separado">
+        <div class="centrado fondo-cuaderno">
+            <form class="centrado" id="formularioInicio">
+                <div class="inputsjugador">
+                    <p id="introduceNombre">Introduce tu nombre aqui:</p><br>
+                    <input id="nombjugador" class="inputNomUser" type="text" placeholder="Nombre"><br>
+                    <p id="nombrejugador" class="textocentrado"></p>
+                </div>
+                <div class="selectores centrado">
+                    <select name="tipoJuego" id="tipoJuego">
+                        <option value="tipo1" selected>Seleccione el tipo</option>
+                        <option value="poli">Historia policiaca</option>
+                        <option value="drama">Historia drama</option>
+                    </select><br>
+                    <input type="button" id="botonFormulario" prevent-default value="Jugar">
+                    <p id="tipoHistoriaDescripcion"></p>
+                </div>
+            </form>
+            <div class="esconder" id="policiaca">
+                <div class="targeta " id="policiaca1">
+                    <div class="typed-strings">
+                        <p>
+                            Suena un disparo, luego un golpe seco de alguien callendo al suelo. Horas despues alguien llama a las autoridades y llegas a la escena del crimen. <br> -"Que crees que ha pasado aqui?", te pregunta la forense. <br> -"No lo
+                            se, cuenta que tenemos Dr. Maria", respondes<br> -"Tenemos un varon de mediana edad, caucasico, con una herida de bala en el pecho. Murio al instante." <br> -"Un ajuste de cuentas? Que opinas?"<br> -"No se, el disparo parece
+                            demasiado profesional, parece mas bien un encargo pero te dire mas cuando realize la autopsia, hasta encontes no podre tener nada en claro."<br> -"Vale, gracias. Cuando tengas algo ya me informaras." <br> Vas hacia el coche
+                            mientras empiezas a pensar que ha ocurido. Te sientas en el asiento del conductor y te diriges a la comisaria. <br> Cuando llegas a la comisaria, te dan los informes y comienzas a leer. Peco Alejando, un camello de poca monta.
+                            Siges con tu teoria que fue un tema de drogas aunque tienes dudas
+                        </p>
+
+                    </div>
+                    <span class="typed"></span>
+                    <div id="opciones">
+                        <h3>ESCOGE!</h3>
+                        <div class="centrado">
+                            <button id="b1">Asunto Drogas</button>
+                            <button id="b2">Asesinato</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca1-2">
+                    <div class="">
+                        <p>Sigues tus instintos, definitivamente si, un tema de drogas. Empiezas a crear una pequeña teoria sobre que pudo a haber pasado mientras haces una lista de los posibles sospechosos. Pasan las horas y suena el telefono, ya tienen
+                            los resultados de la autopsia. Recoges tu abrigo y la lista de sospechosos. Toca empezar a trabajar. Cuando llegas a la morge ya te estan esperando. Al ver sus caras notas cierta preocupacion. "Ha sido una 9mm, es demasiado
+                            limpio <span id="jugador"></span>, no me gusta esto" "Tranquila Maria, esto es un asunto de drogas seguro. No te le des vueltas." "No me escuchas <span id="jugador"></span> esto no es normal. Es un disparo muy limpio, y no
+                            encontramos ningun casquillo en la escena del crimen. Considera que haya sido un profesional, de veras" "Vale Maria, pensare sobre ello" dices mientras recojes el informe y te das la vuelta. Mientras andas hacia la puerta levantas
+                            uno de los brazos y te despides de Maria antes de salir por la puerta. Llegas al coche y abres el informe del forense, empiezas a leer el informe de Maria mientras vas reconsiderando que estes equivocado. La bala atraveso limpiamente
+                            la aorta produciendo una muerte instantanea, si que parece obra de un profesional.</p>
+                    </div>
+                    <span class=""></span>
+                    <div id="opciones">
+                        <h3>ESCOGE!</h3>
+                        <div class="centrado">
+                            <button id="b3">Reconsideras el asesinato, vuelves a la oficina</button>
+                            <button id="b4">Sacas la lista de sospechosos, te dejas llevar por tu intuicion,
+                                es
+                                un asunto
+                                de drogas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca1-3">
+                    <p>Aparcas el coche y miras la lista, Carmen Rasero es la primera que aparece. Entras a su edificio a la vez que te cruzas con una vecina y le preguntas antes de que se aleje.</p>
+                    <p>Ella se da la vuelta y sale corriendo al reconocerte. No sabes que esta pasando pero corres detras de ella tratando de alcanzarla.</p>
+                    <p>Gira una esquina y la pierdes de vista, cuando llegas al final te giras, pero ya no la ves. Decides volver al edificio a ver si logras encontrar algo que te aclare las cosas.</p>
+                    <p>Llegas al edificio y miras en los buzones, Carmen Rasero -> Puerta 302</p>
+                    <p>Subes la escalera buscando el piso y el numero hasta que lo encuentras. La puerta esta cerrada, aunque la cerradura parece facil de abrir. Empujas la puerta con el hombro, y ves que cede. Te retiras dos pasos, y te estampas contra
+                        la puerta, esta cede y entras en la casa.</p>
+                    <p>A simple vista no encuentras nada, asi que empiezas a mirar un poco mas detalladamente. Avanzas a la cocina, te asomas y ves un gato saliendo por la ventana que esta entreabierta. Vas hasta el baño y sorpresa, ves un cristal con unos
+                        polvos blancos encima.</p>
+                    <p>LLegas al dormitorio y descubres otra sorpresa, hay un arma encima de una de las sillas, parece una 9mm.
+                    </p>
+                    <p>Bajas hasta el coche a por bolsas de muestras para llevarte tanto el arma, como ese polvo blanco mientras llamas a comisaria para pedir una orden. Cuando llegas hasta el coche, ves que hay dos personas esperandote.
+                    </p>
+                    <p>"Perdone, <span id="jugador"></span>? Somos el inspector Ahmed Sheriff y mi compañero Jorge Abascal, queremos hacerle un par de preguntas si no le importa."</p>
+                    <p>"Disculpen caballeros, pero ahora estoy ocupado en mitad de un caso" respondes mientras intentas avanzar hacia el coche</p>
+                    <p>"Insistimos <span id="jugador"></span>, es sobre su caso, acompañenos por favor" te responde Jorge mientras te agarra firmemente del brazo.</p>
+                    <p>Miras al inspector Jorge, luego te volteas hacia el inspector Ahmed.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="b5">Les acompañas</button>
+                        <button id="b6">Te zafas y sales corriendo</button>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca1-4">
+                    <p>Sales corriendo hacia la misma direccion por la que huyo Carmen Rasero, miras por encima de hombro para ver como arranca a correr detras de el el inspector Abascal.</p>
+                    <p>Cuando giras la cabeza para mirar de nuevo hacia delante, te golpeas fuertemente contra una farola callendo en seco. Tumbado en el suelo obsevas como los inspectores Abascal y Sheriff se aproximan.
+                    </p>
+                    <p>"Casi me hace correr -----, no se da cuenta que solo estabamos siendo educados?" Te comenta Ahmed Sheriff mientras Jorge Abascal se agacha y te comienza a esposar.</p>
+                    <p>"No entiendo que esta ocurriendo, por que estan arrestandome? Solo estoy haciendo mi trabajo"
+                    </p>
+                    <p>"Hablaremos de su trabajo en comisaria, no se preocupe <span id="jugador"></span>" Dice Jorge Abascal mientras te ayuda a levantar del suelo.</p>
+                    <p>Te llevan hasta el coche y te empujan al asiento trasero. El dolor de la cabeza sigue resonando y aun sigues medio mareado, pero estando sentado al menos no podras caerte de nuevo</p>
+                    <p>Al cabo de unos minutos llegais a comisaria, y te llevan directamente a una sala de interrogatorio frente la mirada sorprendida de muchos compañeros</p>
+                    <p>Comienza el interrogatorio.</p>
+                    <p>"Bueno compañero" comienza diciendo el inspector Sheriff,"empecemos las preguntas, donde estuvo hace 3 dias? cuenteme que hizo todo el dia" dice mientras se deja caer en la silla. Jorge Abascal se queda de pie al lado mirandote sin
+                        pestañear aun tenso por tu intento de huida.</p>
+                    <p>"Tranquilo inspector Jorge. Esta vez no saldre corriendo. Ese dia me levante tarde, estuve el dia anterior en un espectaculo de ilusion y sali tarde, asi que ese dia me desperte tarde con la llamada del caso y fui directo a la escena
+                        del crimen. Luego estuve aqui, en comisaria, pregunte a mis compañeros o a mi superior, y mas tarde me fui a casa a dormir." dices mientras te encojes de hombros.</p>
+                    <p>"Un espectaculo?" pregunta Jorge intrigado,"No me diga que estuvo viendo a los hermanos Ramé-Rivers?"
+                    </p>
+                    <p>Asientes aun medio mareado por el golpe mientras te llevas una mano a la cabeza.
+                    </p>
+                    <p>Sheriff y Abascal se miran y asienten."Volvemos enseguida, vamos a chequear primero si nos cuenta la verdad, y ahora continuaremos." Ambos se levantan y se van, estas solo.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="b7">Esperar paciente</button>
+                        <button id="b8">Forcejeas y consigues escapar de los grilletes.</button>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca1-5">
+                    <p>Te levantas de la silla y te acercas a la puerta en silencio. Abres poco a poco y te asomas al pasillo. No ves a nadie. Sales al pasillo y te dirijes hacia la salida.</p>
+                    <p>De pronto te chocas con el inspector Abascal, que lleva un vaso con cafe. Se cae el cafe y ambos os mirais, acto seguido el inspector Abascal da dos pasos atras y se lleva la mano al arma.</p>
+                    <p>"ALTO! NO SE MUEVA <span id="jugador" style="text-transform: uppercase;"></span>" Dice gritando a la vez que saca el arma.</p>
+                    <p>Te quedas congelado, paralizado. Lo unico que te sale es levantar las manos y ponerte de class="centrado" rodillas. Recuerdas bien lo que hay que hacer, lo has hecho mas de 200 veces, aunque tu estabas en la otra posicion. Te tumbas
+                        en el suelo y pones las manos en la espalda. Sientes un dolor en la cabeza antes de caer inconsciente.</p>
+
+                    <button id="b9" class="centrado">Continuar</button>
+                </div>
+                <div class="targeta " id="policiaca1-6">
+                    <p>Te despiertas aun mareado y dolorido. Ves a Ahmed Sheriff hablando con Jorge Abascal.
+                    </p>
+                    <p>"Te habras quedado agusto no Jorge?" dice Sheriff mientras se cruza de brazos</p>
+                    <p>"Quiza me pase un poco, pero era necesario. Ha sido la mejor manera de retenerlo sabiendo que no trataria de huir" responde Jorge."Parece que se esta desepertando, vamos"</p>
+                    <p>"Si Jorge, tienes razon. Para que discutir. Buenos dias bella durmiente, hemos podido comprobar que tal y como nos contaste estabas en el espectaculo. Teniendo esto en cuenta, y con las pruebas obtenidas hasta ahora solo me queda una
+                        cosa mas que hacer. Le informamos que usted, <span id="jugador"></span> queda usted bajo arresto por el asesinato de Peco Alejandro. Encontramos pruebas de que la bala que lo mato fue disparada de su arma y hemos encontrado testigos
+                        que le inclupan de forma directa."</p>
+                    <p>Estas en shok, no comprendes que pasa, mantienes silencio mientras sigues escuchando el resto de pruebas que te inculpan. Poco a poco te vas vas imaginando tu futuro, en la carcel, un/a policia en la carcel. Solo puedes pensar una
+                        cosa, vas a durar muy poco.</p>
+                    <h2>FIN!</h2>
+                </div>
+                <div class="targeta " id="policiaca2-2">
+                    <p>Dudas, droga en sangre de un camello, puede ser tema de drogas. Aunque por otro lado, un disparo tan limpio, no sabes que pensar. Decides esperar a que te llame la forense Maria. Pasan las horas y suena el telefono, ya tienen los resultados
+                        de la autopsia. Recoges tu abrigo y la libreta donde tienes apuntados hasta ahora las posibles teorias. Toca empezar a trabajar</p>
+                    <p>Cuando llegas a la morge, ya te estan esperando. Al ver sus caras notas cierta preocupacion
+                    </p>
+                    <p>"Ha sido una 9mm, es demasiado limpio <span id="jugador"></span>, no me gusta esto"
+                    </p>
+                    <p>Poco a poco la teoria de que es un asesinato empieza a cuadrar."Interesante" logras decir. "Alguna otra cosa que saber?" preguntas con un destello en los ojos. El caso empieza a ponerse interesante poco a poco.
+                    </p>
+                    <p>"Pues no hemos encontrado el casquillo, aunque si hemos logrado sacar la bala. Aun hay que pasarla por balistica. En cuanto tenga los resultados te los mando a comisaria." Respondre Maria mientras te entrega el informe de la autopsia.</p>
+                    <p>Recoges el informe y te dirijes a la salida de la morge. Llegas al coche y abres el informe del forense, empiezas a leer el informe de Maria mientras vas reconsiderando que estes equivocado. La bala atraveso limpiamente la aorta produciendo
+                        una muerte instantanea, si que parece obra de un profesional. </p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="b10">Regresas a la oficina para seguir reuniendo pruebas del
+                            asesinato.</button>
+                        <button id="b11">Tras leer el informe, ves que tenia drogas en sangre. Cambias de
+                            opicion y
+                            vas en busca de sospechosos de Peco</button>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca2-3">
+                    <p>Al llegar a la comisaria te encuentras en tu mesa apoyados dos personas.</p>
+                    <p>"Inspectores Ahmed Sheriff y Jorge Abascal, asuntos internos, tenemos unas preguntas para usted,
+                        <span id="jugador"></span>, le importaria seguirnos?" Dice el inspector Sheriff mientras señala hacia el pasillo
+                    </p>
+                    <p>"Claro, sin problema, justo ahora iba a ir a por un cafe si les apetece" Respondes. Esto cada vez se parece mas a una novela de misterio.</p>
+                    <p>Os dirijis los tres hacia la maquina del cafe mientras compartes la informacion con ambos inspectores. Segun avanza la conversacion vas notando como el vello se pone de punta. Parece que estas siendo el protagonista de una pelicula.</p>
+                    <p>"Ya tenemos el informe de balistica", dice el inspector Ahmed,"la bala que mato a Peco es de un arma de policia, en concreto de la suya inspector/a"</p>
+                    <p>Quedas petrificado, que acaba de decir? Que la bala que lo mato salio de tu arma?. Te dejas caer en la silla de la cafeteria mientras aun sigues en shock."No se que decir, no he perdido mi arma de vista jamas, y les aseguro que yo
+                        no mate a nadie" logras responder despues de unos instantes.</p>
+                    <p>"Creo que debemos de seguir la conversacion en otro lugar, solo por protocolo. Lo entiende, no?" Dice el inspector Jorge Abascal mientras se acerca a ti."Vamos a una de las salas de inerrogatorio para hablar de esto, asi tambien quedara
+                        registro de la conversacion. Creemos en usted, no se preocupe. Resolveremos que ocurrio en verdad."
+                    </p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="b12" class="centrado">Ir a la sala de interrogatorio.</button>
+                </div>
+                <div class="targeta " id="policiaca2-4">
+                    <p>LLegais a la sala numero 2. Te dejas caer sobre la silla y al otro lado de la mesa se sientan Ahmed Seriff y Jorge Abascal. Jorge saca una carpeta y coloca sobre la mesa un dosier.</p>
+                    <p>"Cuentenos" comienza diciendo Jorge,"Que hizo hace tres dias? Cuenteme el dia en completo por favor."
+                    </p>
+                    <p>"Pues me desperte, con la llamada del comisario por el cadaver de Peco, me levante y fui al trabajo. Me dolia un poco la cabeza, pero supongo que fue de las copas que tome en el espectaculo del dia anterior." Dices aun consfuso frente
+                        a la situacion
+                    </p>
+                    <p>"En el de los hermanos Rame-Rivers?" pregunta Jorge Abascal asombrado</p>
+                    <p>"Si, en ese. Ademas fui uno del voluntarios de la parte de hipnotismo" dices con una media sonrrisa recordando ese momento.</p>
+                    <p>Cuando levantas la mirada ves a los dos inspectores como estan mirandose seriamente. Ahmed asiente, y entonces Jorge te mira seriamente."Por favor, cuente con detalle todo lo que recuerde del espectaculo" dice mientras deja una grabadora
+                        sobre la mesa</p>
+                    <p>Comienzas a contar la historia tratando de recordar todo lo posible, hasta que llegas a la parte del hipnotismo. Ahi tus recuerdos flaquean un poco a causa del hipnotismo.</p>
+                    <p>Los inspectores de asuntos internos se levantan de la silla."Tenemos que debatir una serie de cosas, volvemos ahora." Dice Jorge mientras ambos se aproximan a la puerta."Por favor, no se mueva de esta sala"
+                    </p>
+                    <p>Se van, te han dejado sin esposar, y sin vijilancia.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="b13">Levantarse e irse de la sala de interrogatorio</button>
+                        <button id="b14">Quedate en la sala y trata de recordar la parte del
+                            hipnotismo</button>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca2-5">
+                    <p>Cuando llegan los inspectores has logrado recordar un par de cosas mas del espectaculo y mientras ellos te escuchan asienten y van apuntando las notas en una libreta.</p>
+                    <p>"No vamos a irnos por las ramas, los hermanos Rame-Rivers estan siendo investigados por la interpol y varios departamentos mas por asesinatos. Creemos que esta vez usted ha sido su intento de cabeza de turco, pero esta vez no escaparan.
+                        Lo que hacen es averiguar si hay policias en el publico, y luego o los usan o extorsionan o a saber que...... Y los policias al dia siguiente matan a alguien, lo que pasa es que no todos los policias son inocentes." dice el inspector
+                        Sheriff mientras se reclina en la silla.</p>
+                    <p>"Me esta diciendo que me usaron para matar a una persona?" contestas aun mas en shock. El dia no puede ir a peor, vas callendo en una espiral de desgracias. Te empiezas a ver en la carcel sin poder hacer nada para evitarlo.</p>
+                    <p>"Si, pero usted no era consciente. Le explicare, recuerda que nos comento que hablo con una chica en la cola del espectaculo? con Sandy." dice Jorge</p>
+                    <p>"Si. la recuerdo, luego nos fuimos juntos y nos tomamos algo en un bar cercano"</p>
+                    <p>"Bueno, pues ella es el gancho, ella es la que les dice quien es la persona a la que tienen que manipular. Luego durante el espectaculo ven lo complejo que es de manipular, y en la cita posterior es cuando le suministran la droga y
+                        manipulan para realizar el asesinato." Explica Sheriff."Necesitamos que coopere con nosotros, tiene el telefono de Sandy? asi podremos ayudarle a que no se presenten cargos contra usted" Te dan el movil para que lo busques y desbloquees</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="b15">Buscas el numero de Sandy y se lo das</button>
+                        <button id="b16">Buscas el numero de Sandy, pero en vez de darlo lo
+                            eliminas.</button>
+                    </div>
+                </div>
+                <div class="targeta " id="policiaca2-6">
+                    <!--opcion de estar enamorado de Sandy, te lleva a policiaca1-6 -->
+                    <p>"No voy a darles su numero, no creo que ella tenga nada que ver en esto" Dices mientras les sueltas el telefono sobre la mesa</p>
+                    <p>"No sabe lo que esta haciendo" Dice Abascal mientras recoge el telefono</p>
+                    <p>"No voy a traicionar a Sandy, ella no es la culpable, no la metan en esto" dices en un arranque de rabia mientras te levantas.</p>
+                    <p>Acto seguido el inspector Abascal se lleva la mano al arma mientras da un paso hacia atras. Ahmed esta en shock mirando desde la silla aun sin entender por que has decidido esa respuesta.</p>
+                    <p>Te lanzas sobre Ahmed para tratar de usarlo de rehen, pero este con un agil movimiento te atrapa del brazo y te agarra por la espalda con un perfecto mataleon."Sera mejor que no se resista inspector/a" dice mientras aplica un poco
+                        de presion.</p>
+                    <p>Tratas de zafarte pero sin exito, pronto se empieza poner negra tu vision, y notas como caes al suelo. Despues ves como Jorge se acerca, y ves su pie acercandose hacia ti rapidamente.</p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="b17" class="centrado">continuar</button>
+                </div>
+                <div class="targeta " id="policiaca2-7">
+                    <!--Fin bueno-->
+                    <p>Les das el movil de Sandy, aun no crees lo que esta ocurriendo.</p>
+                    <p>"Gracias por cooperar, le mantendremos informado de la investigacion, pero tenemos que retenerle por ahora, entiendanos" Dice el inspector Sheriff mientras se levanta. Jorge se acerca y te esposa. Te acompañan a una celda del calabozo.</p>
+                    <p>Pasan un par de dias, hoy te llevan a proteccion de testigos, han detenido a los hermanos Rame-Rivers por fin, y Sandy confeso ser su complice. Por fin ves un poco de luz al final de esta tiste historia.</p>
+                    <h2>FIN!</h2>
+                </div>
+            </div>
+            <div class="esconder" id="drama">
+                <div class="targeta " id="drama0">
+                    <!--Inicio-->
+                    <p>Al fin ha llegado el dia, miras la carta que esta sobre la mesa. Escuchas ruido escaleras abajo y corres a desayunar como un relampago. Te encuentras a tu padre en la cocina con el delantal puesto y la cara manchada de harina. Toca
+                        tortitas! El dia no podria empezar con mejor pie. Mientras desayunas escuchas el ruido del movil avisando que Cabify esta a 5 minutos y acto seguido terminas el desayuno y corres a por la maleta.</p>
+                    <p>Llegas a la puerta y ves a tu padre con la cara triste mirando por la ventana. Se escucha el cabify fuera, agarras la maleta y sales a la calle.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d1">Vuelves y te despides de tu padre, el Cabify puede esperar.</button>
+                        <!--1-->
+                        <button id="d2">Corres al coche y te metes en el. Miras a la ventana, pero tu padre
+                            ya no esta. El coche empieza a moverse.</button>
+                        <!--2-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama1">
+                    <!--Abraza a tu padre-->
+                    <p>Entras a casa corriendo y das un abrazo a tu padre, acto seguido ambos empezais a llorar. Ves al conductor meterte prisa, pero a pesar de sus advertencias llegais tarde a estacion de tren. Te bajas a toda velocidad del coche intentando
+                        alcanzar el anden a tiempo, pero al llegar ves como tu tren se aleja de la estacion.</p>
+                    <p>Te acercas a la ventanilla para preguntar cuando sale el proximo tren. El proximo tren sale demasiado tarde, si coges ese tren no llegaras a la presentacion.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d3">Sacas el billete para el proximo tren.</button>
+                        <!--3-->
+                        <button id="d4">Llamas a tu padre para preguntarle si te puede acercar el.</button>
+                        <!--4-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama2">
+                    <!--Te vas-->
+                    <p>Consigues llegar a tiempo a la estación para coger el tren que te llevará a tu nuevo hogar.</p>
+                    <p>Decides pasearte por los diferentes vagones para encontrar un sitio donde sentarte.
+                    </p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d5">Buscas un vagón lo mas vacío posible para sentarte en silencio y
+                            descansar</button>
+                        <!--Llegada1-->
+                        <button id="d6">Buscas un vagón no muy lleno con un ambiente agradable y tranquilo en
+                            el que poder intentar hacer amigos</button>
+                        <!--6-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama3">
+                    <!--Billete 1-->
+                    <p>Decides comprar el billete para el proximo tren mientras piensas en la bronca que te echaría tu padre si supiese lo que acaba de ocurrir, pero tampoco te arrepientes de lo courrido. Merece mas la pena pasar unos minutos más con tu
+                        padre que una presentación. Siempre puedes encontrar alguien que te cuente lo mencionado en la reunión de nuevos alumnos.</p>
+                    <p>Como el tren pasa un un par de horas no merece la pena ir a casa de nuevo para luego volver. Lo único que conseguirias es llegar a casa para tener que salir a los pocos minutos y perder el dinero de 2 viajes más, a si que decides dar
+                        una vuelta por la estacion de tren buscando matar las horas muetras, aunque acabaste pasando esas horas mirando el movil.</p>
+                    <p>Miras la hora del movil y aun quedan varios minutos para que el tren llegue."Mejor voy para allá aunque tenga que esperar, si pierdo otro tren más tanto papa como los profesores me mataran jajajaj" -- piensas mientras te levantas del
+                        banco que encontraste y te diriges a tu anden.</p>
+                    <p>El tren se encontraba practicamente vacío, a excepcion de algunos adultos y lo que parecen ser alumnos de cursos superiores. Decides sentarte solo y pensar la forma de contarle lo ocurrido a la directora intentando que no se enfade
+                        demasiado contigo.</p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d7" class="centrado">Continuar</button>
+                    <!--Llegada1-->
+                </div>
+                <div class="targeta " id="drama4">
+                    <!--Llamas a tu padre-->
+                    <p>Llamas a tu padre, algo apenado por molestarle de esta forma, pero al menos puedes estar con él un rato más antes de compenzar el curso. Tu padre tarda en contestar al telefono, pero al final escuchas la voz de tu padre.</p>
+                    <p>"-nombre-, ¿ocurre algo?, ¿estás ya en el tren?"--preguntó él algo preocupado, sabia que si le llamaba tan pronto algo habia ido mal.</p>
+                    <p>"Papá, hola! No te enfades porfa..."</p>
+                    <p>"¿Qué has hecho ahora?"--dijo tu padre resoplando.</p>
+                    <p>"Oye que no es mi culpa, ¿vale? He perdidio el tren, había algo de trafico y el conductor no podía venir más rápido. ¿Podrías llevarme tú?, llegaré tarde de todas formas" -- dijiste con algo de indignación en tu voz.</p>
+                    <p>"Ah....está bien. Esperame en la entrada de la estación, enseguida salgo para allá."
+                    </p>
+                    <p>"Gracias!! Nos vemor ahora" -- contestaste alegre.</p>
+                    <p>Los minutos pasaban, tu padre no llega y tu empiezas a preocuparte. No debería tardar mas de 20 minutos en llegar a la estación y ya habian pasado más de 45. Llamas de nuevo a tu padre, varias veces, pero no contesta.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d8">Comienzas a volver a casa, andando, con la esperanza de encontrarte a
+                            tu padre de camino con una rueda
+                            pinchada o algo así.</button>
+                        <!--5-->
+                        <button id="d9">Compras el billete para el proximo tren, avisando a tu padre por
+                            mensaje, esperando que no se enfade
+                            mucho, pero sino llegarías muy tarde.</button>
+                        <!--9-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama5">
+                    <!--Volver a casa andando-->
+                    <p>Decides volver andando a casa. Sabes que tardarás un rato largo, pero al menos así podras ver si a tu padre le ha ocurrido algo por el camino.</p>
+                    <p>Tras varios minutos andando ves varios coches de policía rodenando un accidente de tráfico justo en el cruce que tu padre debía pasar para poder llegar a la estación.</p>
+                    <p>"Se abrá quedado atrapado en el atasco que esto ha generado" -- pensaste mientras acelerabas tu paso para ir a buscar su coche entre el tráfico parado.</p>
+                    <p>Cuanto más te acercabas al accidente y más visión tenías de la escena más aumentaba tu preocupación, sobre todo porque el coche que peor había acabado se parecía mucho al de tu padre. Instintivamente empezaste a correr.</p>
+                    <p>Un agente de policía te vio llegar corriendo y te llamo."Joven!¿Le ocurre algo?".
+                    </p>
+                    <p>"Dejeme pasar por favor, creo que ese es el coche de mi padre!" -- dijiste de forma entrecortada con un claro tono de desesperación en tu voz, gitada por venir corriendo</p>
+                    <p>"Intenta respirar con calma. Dime el nombre de tu padre y la matrícula del coche si es posible." --Dijo el policía, con una expresión claramente más seria pero sin perder la clama.</p>
+                    <p>"Albert -apellido- , matricula 7535 JCK creo recordar"</p>
+                    <p>"Ven conmigo, vamos a comprobar los datos" -- contestó guiándote haacia un grupo de policías.
+                    </p>
+                    <p>"Espera un momento, voy a preguntar"</p>
+                    <p>Al separase del grupo tras varios minutos de conversación, vuelve contigo y te da la peor noticia que podías esperar."Me temo que tenías razon joven, el coche es el de tu padre." -- Dijo preocupado, al ver como palidecías."Tu padre...
+                        salió gravemente herido y cuando llegó la ambulancia... ya fue demasiado tarde. Lo siento mucho."</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d10">Le pides ayuda al policia, pues no tienes más familiares, no sabes
+                            que hacer, ni como reaccionar.</button>
+                        <!--13-->
+                        <button id="d11"> Varias emociones te empujan a salir de aquel escenario, volviendo
+                            veloz y con el rostro lleno de lágrimas a tu casa.</button>
+                        <!--12-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama6">
+                    <!--Hacer amigos-->
+                    <p>Vas avanzando por los diferentes vagones y te encuentras a una chica vacilando de mala manera a un grupo mientras sus amigos ríen detras.</p>
+                    <p>Al ver esta escena recordaste los días en los que tus compañeros de clase te molestaban de forma similar y, aunque estuviste a punto de pasar de largo por no buscarte problemas, decediste intervenir, puesto que ya tenías cietra experiencia
+                        a la hora de contestar a gente que se cree superior al resto.</p>
+                    <p>Avanzas hasta quedar entre ambos grupos y miras a la chica con una mirada seria, para despues dibujar una sonrisa sarcástica y burlona mientras ella te miraba con desagrado.</p>
+                    <p>"¿Tanto te aburre tu propia vida que tienes que meterte en la del resto? Que patetico."--Dijiste medio riendo mientras dejas tu maleta y te sientas junto al grupo al que decidiste defender.</p>
+                    <p>"¿Quien te crees que eres para ...." --intentó decir ella indignada, pero la interrumpiste
+                    </p>
+                    <p>"¿Crees que por teñirte el pelo y mirar por encima del hombro al resto eres mejor? Te recomiendo bajarte del pedestal al que tu misma te has subido o la vida te tratará muy mal señorita creida "-- dijiste sin dudar mientras te acomodabas
+                        en el vagón.</p>
+                    <p>Al acabar de hablar te pusiste los cascos con la musica bien alta y mirabas como ella intentaba decirte de todo mientras su cara se volvía cada vez más roja y reías ligeramente de la situación.
+                    </p>
+                    <p>Al irse ella y su séquito, te quitaste los cascos y decidiste presentarte a los que esperabas que fueran tus nuevos amigos."Hola, soy <span id="jugador"></span>, un placer" -- dijiste con una sonrisa al ver sus caras de asombro y alegría.</p>
+                    <p>"HAS ESTADO GENIAL!" -- exclamó el más bajito de los 3 --"Soy Gus, un placer conocerte".
+                    </p>
+                    <p>"Gracias por defendernos, soy Amelia" -- dijo calmada la chica sentada al lado de Gus.
+                    </p>
+                    <p>"Yo soy Viki" -- dijo la otra chica del vagón"Poca gente le planta cara a Eda y su grupo, luego tratará de hacerte la vida imposible" --dijo haciendo reir a todos.</p>
+                    <p>Pasaste el resto del viaje conociendo a tus nuevos amigos hasta que por la megafonía del tren se anuncia la llegada al instituto</p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d12" class="centrado">Continuar</button>
+                    <!--LLegada1-->
+                </div>
+                <div class="targeta " id="dramaLLegada1">
+                    <p>Al bajarte del tren quedaste impresionado por el gran edificio que se alzaba ante ti, más moderno de lo que te habias imaginado. Una vez dentro del edificio te alegró ver que todo estaba bien señalizado, pero no de la forma que te
+                        esperabas. Cada pasillo tenía un nombre bastante peculiar indicado en la entrada de cada uno y las indicaciones se basaban en estos nombres. Entonces para llegar al despacho de la directora debias atravesar 'el paseo de los sueños',
+                        donde se encontraban las clases en las que se enseñaba la magia de la ilusión, subir las escaleras, dirigirte hacia 'los mandatarios' y llamar a la tercera puerta a la izquierda.</p>
+                    <p>"Adelante!" escuchaste decir desde el interior de la sala.</p>
+                    <p>"Oh pero si es usted -apellido-, se me notificó su ausencia en la presentacion al nuevo alumnado.
+                    </p>
+                    <p>¿Que ha le ha ocurrido?" -- dijo la directora Dump.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d13">Contarte la verdad a la directora, puesto que se la ve bastante
+                            comprensiva y calmada</button>
+                        <!--7-->
+                        <button id="d14">Contar una excusa, no muy exagerada, para poder justificar mejor tu
+                            tardanza</button>
+                        <!--8-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama7">
+                    <!--Verdad al completo-->
+                    <div id="verdad1">
+                        <p>"La verdad, directora Dump, es que tardé mucho al despedirme de mi padre y al llegar a la estación vi marhcarse el tren y decidí compar un billete para el siguiente tren." -- Contestaste con sinceridad.</p>
+                        <p>"¿Ha comentado lo ocurrido a su padre?" -- Dijo la directora, aliviada al saber que no te había ocurrido nada grave.</p>
+                        <p>"La verdad es que no, no quería que se preocupara. Pensaba llamarle esta noche."
+                        </p>
+                        <p>"Bien, no se preocupe, yo le llamraé pare comentarle que ha llegado al centro, así estara más tranquilo." -- Comentó sonriendo"Ahora, aqui tiene, esta es la llave de su dormitorio. Se encuentran en los últimos pisos, justo encima
+                            de las zonas comunes."</p>
+                        <p>"Muchas gracias."-- Dices con una sonrisa mientras salias hacia los dormitorios.
+                        </p>
+                        <h3>ESCOGE!</h3>
+
+                        <button id="d15" class="centrado">Continuar</button>
+                        <!--Vida1-->
+                    </div>
+                    <div class="targeta " id="verdad2">
+                        <p>"La verdad, directora Dump, es que tardé mucho al despedirme de mi padre y al llegar a la estación vi marhcarse el tren. Ante esta situación llame a mi padre para saber si podía traerme él." -- Contestaste con sinceridad y una
+                            evidente preocupacion.</p>
+                        <p>"¿Pero?"-- Preguntó,intuyendo que había ocurrido algo más.</p>
+                        <p>"Pero al ver que estaba tardando mucho y que al final llegaría más tarde de lo previsto, decidí comprar un billete para el siguiente tren y avisé a mi padre de esto por mensaje. Han pasado horas y aún no me contesta, no se nada
+                            de él desde que dijo que saldría de casa."</p>
+                        <p>"Bien, no se preocupe, intentaré ponerme en contacto con su padre para comentarle lo ocurrido, tanto para su tranquilidad como la tuya. Mientras tanto, ten, esta es la llaves de su dormitorio. Se encuentran en los últimos pisos,
+                            justo encima de las zonas comunes. La haré llamar cuando sepa algo de su padre. Su nombre es Albert -apellido-, ¿verdad?"--dijo intentando tranquilizarme.</p>
+                        <p>"Así es, muchas gracias."-- Dijiste mientras salias hacia los dormitorios.</p>
+                        <h3>ESCOGE!</h3>
+
+                        <button id="d16" class="centrado">Continuar</button>
+                        <!--Vida2-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama8">
+                    <!--Mentira 1-->
+                    <p>"De camino a la estación se produjo un accidente de tráfico con varios coches. Al parecer no hubo ningún herido grave pero los coches estaban en medio de la carretera y hasta que no llegó la policía a poner orden no se pudo avanzar.
+                        Al final tuve que comprar un nuevo billete para el próximo tren." -- mentiste.</p>
+                    <p>"Oh, que faena. ¿Has informado a tu padre sobre lo ocurrido? Quizá se preocupara al llegarle nuetra notificación sobre tu ausencia." -- te preguntó ella.</p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d17">Sigues con tu pequeña mentira para cerrar este asunto con la
+                            directora.</button>
+                        <!--10-->
+                        <button id="d18">Le cuentas parte de la verdad, puesto que tu padre no mostraba
+                            señales
+                            de vida y esto no era muy comúnen él.</button>
+                        <!--11-->
+                    </div>
+                </div>
+                <div class="targeta " id="drama9">
+                    <!--Billete 2-->
+                    <p>
+                        Vas a comprar el billete y decides dar una vuelta por las diferentes tiendas de la estacion intentando calmar la preocupacion que se habia generado en ti. Tu padre tiene sus propios problemas y quizá le surgió algo que al final le pedía venir a por ti.
+                    </p>
+                    <p>
+                        Miras la hora del movil y aun quedan varios minutos para que el tren llegue."Mejor voy para allá aunque tenga que esperar, si pierdo otro tren más tanto papá como los profesores me mataran jajajaj" -- piensas mientras te levantas del banco que encontraste
+                        y te diriges a tu anden.
+                    </p>
+                    <p>
+                        El tren se encontraba practicamente vacío, a excepcion de algunos adultos y lo que parecen ser alumnos de cursos superiores. Decides sentarte solo y pensar la forma de contarle lo ocurrido a la directora intentando que no se enfade demasiado contigo.
+                    </p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d19" class="centrado">
+                        <!--LLegada1-->
+                        Continuar
+                    </button>
+                </div>
+                <div class="targeta " id="drama10">
+                    <!--Acaba la mentira-->
+                    <p>"Si, ya he hablado con él y explicado que ocurrió, no se preocupe" --Dijiste con confianza. La verdad es que no querías que la directora se preocupara por esto, quizá tu padre perdió el telefono o algo similar, no es la primera vez
+                        que ocurre.
+                    </p>
+                    <p>
+                        "Muy bien. Ahora, aqui tiene, esta es la llave de su dormitorio. Se encuentran en los últimos pisos, justo encima de las zonas comunes." --Comentó con una sonrisa mientras te entregaba la llave.
+                    </p>
+                    <p>
+                        "Muchas gracias, y diculpe el retraso" --dijiste mientras te dirigias hacia los domitorios.
+                    </p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d20" class="centrado">
+                        <!--Vida1-->
+                        Continuar
+                    </button>
+                </div>
+                <div class="targeta " id="drama11">
+                    <!--Medias verdades-->
+                    <p>"Sinceramente, lo he intentado, le he escrito y le he intentado llamar pero no me contesta. No se nada de él desde hace horas..."--Dijiste con un claro tono de preocupacion en tu voz.</p>
+                    <p>"Bien, no se preocupe, intentaré ponerme en contacto con su padre para comentarle lo ocurrido, tanto para su tranquilidad como la tuya. Mientras tanto, ten, esta es la llaves de su dormitorio. Se encuentran en los últimos pisos, justo
+                        encima de las zonas comunes. La haré llamar cuando sepa algo de su padre. Su nombre es Albert -apellido-, ¿verdad? "--dijo intentando tranquilizarme.</p>
+                    <p>"Así es, muchas gracias."-- Dijiste mientras salias hacia los dormitorios.</p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d21" class="centrado">
+                        <!--Vida2-->
+                        Continuar
+                    </button>
+                </div>
+                <div class="targeta " id="drama12">
+                    <!--Corres a casa-->
+                    <p>
+                        Comienzas a correr con todas tus fuerzas. Tu casa estaba cerca y no tardaste en poder verla. Al llegar te encuentras con la puerta abierta, claramente forzada. Con tu rostro pálido decides entrar en la casa, enocntrándote con todo destrozado y revuelto.
+                        Te quedas de pie, cerca de la entrada sin poder creerte lo que ves. Tu hogar estaba completamente destrozado, tu padre ya no estaba y tu ya no sabes que hacer.
+                    </p>
+                    <p>
+                        De repente, esuchas sonidos fuertes desde el piso de arriba y varias voces. Hay lguien mas en la casa, pero no es tu padre, sabes que no debes hacerte esas ilusiones.
+                    </p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d22">
+                            <!--14-->
+                            Sales corriendo de la casa y buscas a los policías que estaban en el lugar del accidentes para
+                            avisar de
+                            la situacion en tu casa.
+                        </button>
+                        <button id="d23">
+                            <!--15-->
+                            Subes las escalesas para ver quien esta arriba, quizá es un policía o un vecino intentando saber
+                            que
+                            estaba pasando.
+                        </button>
+                    </div>
+                </div>
+                <div class="targeta " id="drama13">
+                    <!--Ayuda-->
+                    <p>
+                        "Pero... sin mi padre... no se que hacer, no tengo a nadie más... ¿qué hago ahora?" --Dijiste entre sollozos.
+                    </p>
+                    <p>
+                        "Dime, ¿conoces el Intituto de Magia Hexide?"-- preguntó con amabilidad el policia.
+                    </p>
+                    <p>
+                        "Si.. estaba de camino para comenzar a estudiar allí este año, pero mi padre no llegaba y... bueno..."--No te salían las palabras
+                    </p>
+                    <p>
+                        "Pues veras, soy el agente Hunter, viejo amigo de la directora Dump. Ella te ayudará, te llevaré yo mismo con ella"--Dijo este intentando calmarte.
+                    </p>
+                    <p>
+                        Tu ya no sabías que decir, simplemente asentiste, te dejaste guiar con tus cosas al coche de Hunter y este te llevó a ver a la directora.
+                    </p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d24" class="centrado">
+                        <!--Vida2-->
+                        Continua
+                    </button>
+                </div>
+                <div class="targeta " id="vida1">
+                    <p>
+                        Ya han pasado varias semanas. No te va mal en los estudios, cada vez controlas mejor tu magia, eres amigo de Gus, Amelia y Viki, con los cuales compartes las zonas comunes de los dormitorios, y tambien te llevas cada vez mejor con Eda, sorpendentemente.
+                        Pero aunque todo vaya bien, llevas todo este tiempo sin saber nada de tu padre, no recibe los mensajes, no contesta a las llamadas... La directora aún no ha conseguido contactar con él y cada día que pasa tu preocupación aumenta.
+                    </p>
+                    <p>
+                        "-nombre- -apellido-, dirijase al despacho de la directora Dump!" --Se escuchó por megafonía.
+                    </p>
+                    <p>
+                        Dejaste de estudiar y te levantaste para dirigirte al despacho de la directora.
+                    </p>
+                    <p>
+                        Al llegar, te encontraste a la directora acompañada de un agente de policia, quienes te miraron con procupación.
+                    </p>
+                    <p>
+                        "Joven, soy Hunter, un amigo de la directora Dump, quien me ha contado la situación con su padre."--Dijo apenado."Siento comunicarle que su padre su padre hace semanas murió en un accidente de tráfico."
+                    </p>
+                    <p>
+                        "Le ayudaré con todo lo que neceiste joven -apellido-"-- comentó la directora en un intento de calmarte
+                    </p>
+                    <p>
+                        Elige, que haces?
+                    </p>
+                    <h3>ESCOGE!</h3>
+                    <div class="centrado">
+                        <button id="d25">
+                        <!--Vida2-->
+                        Decides aceptar la ayuda que te ofrece la directora para manejar esta situacion.
+                    </button>
+                        <button id="d26">
+                        <!--16-->
+                        Decides marcharte de inmediato a por una mochila y dirigirte a tu casa, no puedes creerte lo que
+                        ocurre.
+                    </button>
+                    </div>
+                </div>
+                <div class="targeta " id="vida2">
+                    <p>
+                        Ya han pasado 4 meses desde que descubriste la muerte de tu padre. No es algo facil de superar. De hecho, no lo has superado aun, pero has empezado a comprender como vivir con ello. Te centraste mucho en tus estudios, era tu forma de no pensar mucho en
+                        ello.
+                    </p>
+                    <p>
+                        Algunas tardes las pasabas con la directora, quien te ayudó desde el primer monento. También te proporcionó un psicólogo que te ayudaba a manejar mejor tus emociones.
+                    </p>
+                    <p>
+                        En tu tiempo libre, preferías quedarte en tu habitacion, pero a veces decidías pasar algo de tiempo con Gus, Amelia y Viki, quienes querían animarte siempre con sus tonterías y chistes.
+                    </p>
+                    <p>
+                        El tiempo fue pasando y cada vez dolía menos y empezabas a socializar más y sentirte mejor. Acabarías considerando el instituto un nuevo hogar.
+                    </p>
+                    <p>
+                        Fin.
+                    </p>
+                </div>
+                <div class="targeta " id="drama14">
+                    <p>
+                        Llegas corriendo de nuevo con los policías y les cuentas lo ocurrido. Casi de froma inmediata varios agentes van hacia tu casa y hablas con el agente de antes.
+                    </p>
+                    <h3>ESCOGE!</h3>
+
+                    <button id="d27" class="centrado">
+                        <!--13-->
+                        Continuar
+                    </button>
+                </div>
+                <div class="targeta " id="drama15">
+                    <p>
+                        Subes con cuidado las escaleras al segundo piso y escuchas la conversación entre 2 personas
+                    </p>
+                    <p>
+                        "Busca por todos lados, tiene que estar en algun lugar de la casa"-- Dijo uno de los presentes
+                    </p>
+                    <p>
+                        "Eso ya lo se, si volvemos sin esa carpeta somos hombres muertos"-- dijo el otro
+                    </p>
+                    <p>
+                        Al acabar de subir, las escaleras chirriaron, alertando a esos hombres de tu presencia.
+                    </p>
+                    <p>
+                        "Quien anda ahi?! Eh, tu vives aqui! Donde esta la carpeta!"-- Preguntó uno de ellos con un arma en la mano.
+                    </p>
+                    <p>
+                        Tu cuerpo petrificó, no eras capaz de reaccionar, y mucho menos sabías de que hablaban.
+                    </p>
+                    <p>
+                        "Yo...yo no se que carpeta..." -- conseguiste decir con voz temblorosa.
+                    </p>
+                    <p>
+                        Antes de poder moverte, el hombre, aún con el arma en la mano, se acercó a ti y dijo seriamente --"Entonces no nos sirves de nada"-- mencionó justo antes de apretar el gatillo.
+                    </p>
+                    <p>
+                        Fin.
+                    </p>
+                </div>
+                <div class="targeta " id="drama16">
+                    <p>
+                        Al llegar te encuentras con la puerta abierta, claramente forzada. Con tu rostro pálido decides entrar en la casa, enocntrándote con todo destrozado y revuelto. Te quedas de pie, cerca de la entrada sin poder creerte lo que ves. Tu hogar estaba completamente
+                        destrozado, tu padre ya no estaba y tu ya no sabes que hacer.
+                    </p>
+                    <p>
+                        De repente, esuchas sonidos fuertes desde el piso de arriba y varias voces. Hay lguien mas en la casa, pero no es tu padre, sabes que no debes hacerte esas ilusiones.
+                    </p>
+                    <button id="d28" class="centrado">
+                        <!--15-->
+                        Continuar
+                    </button>
+                </div>
+            </div>
+            <div class="imagen-div centrado">
+                <img id="imagen" src="img/plumaTinta.png" alt="Imagen no cargada">
+            </div>
+        </div>
+    </div>
+    <footer class="esconder" id="temporizador">
+        <div id="reloj" class="centrado">
+            30
+            <span class="reloj"></span>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento voz</title>
+</head>
+
+<body>
+    <br><br>
+    <h1>Hola, soy tu asistente</h1>
+    <br>
+    <h2 id="textoEscuchado"></h2>
+</body>
+<script>
+    const SpeechRecognition = webkitSpeechRecognition;
+    let recognition = new SpeechRecognition();;
+    let boolean = false;
+    const fraseclave = /hola ordenador/g;
+    const frBusqueda = /hacer una busqueda/g;
+    const frDictado = /hacer un dictado/g;
+    window.addEventListener("load", iniciar);
+
+    function iniciar() {
+        if (confirm("Esta web usara su microfono para interactuar con usted, pulse aceptar para continuar")) {
+            recognition.start();
+            iniciarAsistente();
+            recognition.onresult = function iniciarDictado(e) {
+                console.log(e.results);
+                let transcript = e.results[0][0].transcript;
+                let confidence = e.results[0][0].confidence;
+                if (fraseclave.test(transcript)) {
+                    document.getElementById("textoEscuchado").innerHTML = "Hola! En que puedo ayudarte? Hasta ahora solo puedo hacer 2 opciones: <br>1. Hacer una busqueda<br>2. Hacer un dictado"
+                    recognition = new SpeechRecognition();
+                    recognition.start();
+                    recognition.onresult = function iniciarDictado(e) {
+                        console.log(e.results);
+                        transcript = e.results[0][0].transcript;
+                        if (frBusqueda.test(transcript)) {
+                            recognition = new SpeechRecognition();
+                            recognition.start();
+                            document.getElementById("textoEscuchado").innerHTML = "Sobre que quieres hacer la busqueda? <br>";
+                            recognition.onresult = function iniciarDictado(e) {
+                                transcript = e.results[0][0].transcript;
+                                document.getElementById("textoEscuchado").innerHTML = `La busqueda a realizar es sobre ${transcript}`;
+                            }
+                        } else if (frDictado.test(transcript)) {
+                            recognition = new SpeechRecognition();
+                            recognition.start();
+                            document.getElementById("textoEscuchado").innerHTML = "Comienza el dictado: <br>";
+                            recognition.onresult = function iniciarDictado(e) {
+                                transcript = e.results[0][0].transcript;
+                                document.getElementById("textoEscuchado").innerHTML += transcript;
+                            }
+                        } else {
+                            document.getElementById("textoEscuchado").innerHTML = "No he entendido que me querias decir"
+                        }
+                    }
+                } else {
+                    document.getElementById("textoEscuchado").innerHTML = "No te entendi";
+                }
+            }
+
+
+
+            function iniciarAsistente() {
+                recognition.onstart = function() {
+                    document.getElementById("textoEscuchado").innerHTML = "Hola soy BMaX-26 tu asistente virtual, di hola ordenador para comenzar";
+                }
+            }
+        } else {
+            document.getElementById("textoEscuchado").innerHTML = "Asi no puedo trabajar, recarga la web para que pueda ayudarte y selecciona 'Aceptar'";
+        }
+    }
+    //document.getElementById("boton").addEventListener("click", speedchAPI);
+</script>
+
+</html>

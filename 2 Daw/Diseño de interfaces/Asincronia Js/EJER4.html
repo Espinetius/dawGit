@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <button id="cargar">Cargar</button>
+    <div id="caja">
+
+    </div>
+</body>
+<script>
+    document.getElementById("cargar").onclick = cargar;
+
+    function cargar() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "jsonVariosRegistros.txt", true);
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                cargarJSON(this);
+            }
+        };
+
+        xhr.send();
+    }
+
+    function cargarJSON(json) {
+        var myObj = JSON.parse(json.responseText);
+        nombres = Object.keys(myObj); // genera un array con el nombre de las propiedades del objeto
+
+        for (var i = 0; i < myObj.length; i++) {
+            document.getElementById("caja").innerHTML += "nombre: " + myObj[i].nombre + "<br>";
+            document.getElementById("caja").innerHTML += "edad: " + myObj[i].edad + "<br>";
+
+            for (let j = 0; j < myObj[i].mascotas.length; j++) {
+                document.getElementById("caja").innerHTML += myObj[i].mascotas[j].animal + " - " + myObj[i].mascotas[j].name + "<br>";
+            }
+        }
+    }
+</script>
+
+</html>

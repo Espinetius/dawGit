@@ -1,0 +1,36 @@
+form {  
+    margin:0 auto 0 auto;  
+    width:400px;  
+}  
+label {  
+    display:block;  
+    margin: 5px auto 5px auto;  
+    letter-spacing:1px;  
+    }  
+input, textarea {  
+    width:370px;  
+    height:20px;  
+    background: silver;  
+    border:2px solid #000;  
+    padding:10px;  
+    margin: 5px auto 5px auto;  
+    font-size:13px;  
+    color:white;  
+}  
+textarea {  
+    height:150px;  
+}  
+#enviar {  
+    width:85px;  
+    height:40px;  
+    margin-top:5px;  
+    cursor:pointer;  
+    background-color: grey;  
+}  
+.formulario {  
+    display:block;  
+    margin:0 auto;  
+    width:400px;  
+    color: #000;  
+    font-family:Arial;  
+}  

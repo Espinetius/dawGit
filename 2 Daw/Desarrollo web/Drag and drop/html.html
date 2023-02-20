@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <div class="pequeña" id="1" draggable="true" ondragstart="drag(event)">
+            <p id="texto">Mueve esta caja</p>
+        </div>
+        <div class="grande" id="caja2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="textoCaja">Ven aqui...</p>
+        </div>
+        <div class="grande" id="3">
+            <p>Aquí no...</p>
+        </div>
+    </div>
+</body>
+<script>
+    function drag(e) {
+        e.dataTransfer.setData("text", e.target.id);
+    }
+
+    function drop(e) {
+        e.preventDefault();
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+        e.target.className = "postMovimiento";
+        document.getElementById("texto").innerText = "Ya he llegado";
+        document.getElementById("textoCaja").innerHTML = "Bienvenido";
+    }
+
+    function allowDrop(e) {
+        e.preventDefault();
+        document.getElementById("texto").innerText = "Llevame a la caja azul";
+    }
+</script>
+
+</html>

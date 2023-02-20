@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Recorrer árbol DOM</title>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <H1> CICLOS DE INFORMÁTICA EN IES PALOMERAS VALLECAS </H1>
+    <div id="mañana">
+        <h2> Grado Superior </h2>
+        <ul id="lista">
+            <li>ASIR1</li>
+            <li>ASIR2</li>
+            <li>DAW1</li>
+            <li>DAW2</li>
+        </ul>
+
+        <div id="tarde">
+            <h2> Grado Medio </h2>
+            <ul id="lista">
+                <li>SMR1A</li>
+                <li>SMR1B</li>
+                <li>SMR2A</li>
+                <li>SMR2B</li>
+            </ul>
+            <h2> Grado Superior </h2>
+            <ul id="lista">
+                <li>DAM1</li>
+                <li>DAM2</li>
+            </ul>
+        </div>
+
+
+</body>
+<script>
+    window.addEventListener("load", arraysh2());
+
+    function arraysh2() {
+        let arrays = document.getElementsByTagName('h2');
+        for (let i = 0; i < arrays.length; i++) {
+            arrays[i].addEventListener("click", ej5);
+        }
+    }
+
+    function ej5() {
+        let contenido = document.createElement("p");
+        let grado = this.innerHTML;
+        let turno = this.parentNode.id;
+        let mensaje1 = document.createTextNode('Has elegido ' + grado + ' que se imparte en el turno de ' + turno + '. ');
+        contenido.appendChild(mensaje1);
+        document.body.appendChild(contenido);
+        let listacursos = this.nextElementSibling;
+        let listaCur = listacursos.children;
+        let cadenacursos = " ";
+        for (let i = 0; i < listaCur.length; i++) {
+            cadenacursos += listaCur[i].innerHTML + " ";
+        }
+        let mensaje2 = document.createTextNode('Los nº de grupos que se imparten son: ' + listaCur.length + ': ' + cadenacursos);
+        contenido.appendChild(mensaje2);
+        document.body.appendChild(contenido);
+    }
+</script>
+
+</html>

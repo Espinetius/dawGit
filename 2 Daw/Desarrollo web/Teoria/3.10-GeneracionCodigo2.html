@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Nueva ventana</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var texto = prompt("Ingresa un título para la nueva ventana: ");
+		var ventanaNueva = window.open();
+		ventanaNueva.document.write("<h1>" + texto + "</h1>");
+	</script>
+</body>
+</html>

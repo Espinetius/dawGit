@@ -1,0 +1,10 @@
+.titulopagina {
+    background-color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    border-left: 1px dotted red;
+    border-top: 1px dotted red;
+}

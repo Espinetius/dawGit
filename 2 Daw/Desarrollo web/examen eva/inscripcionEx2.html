@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Examen DOM</title>
+	<style>
+		.notables{color:pink;}
+	</style>
+	<script>
+    window.addEventListener('load',iniciar);
+    function iniciar(){
+      var lista=document.getElementById('lista');
+     
+      for(i=0;i<lista.children.length;i++){
+        lista.children[i].addEventListener('click',agregar);
+      }
+      document.getElementById('imprimir').addEventListener('click',mostrarInfo);
+    }
+    function agregar(e){
+      var nombre=prompt("Introduce nombre completo del alumno - nota","");
+      palabras=nombre.split(" ");
+      frase="";
+      for(i=0;i<palabras.length-1;i++){
+        frase=frase+titulo(palabras[i])+" ";
+      }
+      frase=frase+titulo(palabras[palabras.length-1]);
+      nombre=frase;
+      var linea=document.createElement('li');
+      var texto=document.createTextNode(nombre);
+      linea.appendChild(texto);
+      if(palabras[palabras.length-1]>7){
+        linea.className='notables';
+      }
+      lista.insertBefore(linea,e.target);
+    }
+    function titulo(palabra){
+        return palabra.charAt(0).toUpperCase()+palabra.slice(1);
+    }
+    function mostrarInfo(){
+        document.getElementById('texto').innerHTML="El numero de usuarios inscritos es: "+
+        lista.children.length+".<br/>El primero es "+mostrarNombre(lista.firstChild.nextElementSibling.textContent)+
+        " y el ultimo es "+mostrarNombre(lista.lastChild.previousElementSibling.textContent)+
+        ".<br/>Alumnos con nota superior a 7: "+alumnos7();
+      }
+    function alumnos7(){
+      alumnos="";
+      for(i=0;i<lista.children.length;i++){
+        if(lista.children[i].className=='notables'){
+          alumnos+="<br/>"+mostrarNombre(lista.children[i].textContent);
+        }
+      }
+      return alumnos;
+    }
+    function mostrarNombre(nombre){
+        return nombre.substring(0,nombre.length-4)
+    }
+  </script>
+</head>
+<body>  
+     <h2> LISTADO DE ALUMNOS Y NOTAS FINALES </h2>
+     <ul id="lista">
+       <li class="notables">Pedro Garcia - 8 </li>
+       <li>Alberto Blanco - 7 </li>
+       <li class="notables">Ana Pérez - 9 </li>
+       <li>Adrian Sanchez - 6 </li>
+       <li class="notables">Rosa Perez - 8 </li>
+       <li>Alberto Sanchez - 5 </li>
+     </ul>
+      <input type="button" id="imprimir" value="Mostrar info"> 
+
+  <div id="texto"> </div>
+</body>
+</html>

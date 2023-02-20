@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+
+<title>Ejercicio 4</title>
+
+<style type="text/css">
+</style>
+<script type="text/JavaScript">
+	window.addEventListener('load',iniciar);
+	function iniciar(){
+		if(sessionStorage.getItem('color')==null || sessionStorage.getItem('texto')==0){
+			alert('No se han registrado datos');
+			window.close();
+		}else{
+			cuadro=document.getElementById('cuadro');
+			cuadro.style.backgroundColor=sessionStorage.getItem('color');
+			cuadro.children[0].innerHTML=sessionStorage.getItem('texto');
+			fecha=new Date();
+			cuadro.children[1].innerHTML=fecha.toLocaleDateString();
+		}
+	}
+</script>
+
+</head>
+
+<body>
+	<div id="cuadro" style='padding: 20px; width: 300px;'>
+		<div></div>
+		<div></div>
+		<input type="button" value="Borrar el webStorage" onclick="sessionStorage.clear()">
+		<input type="button" value="Imprimir" onclick="window.print();">
+		<input type="button" value="Cerrar" onclick="window.close();">
+		</div>
+	</div>
+	</div>
+</main>
+
+</body>
+</html>

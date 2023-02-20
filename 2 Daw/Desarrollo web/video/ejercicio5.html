@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejer 5 Video</title>
+
+
+    
+</head>
+<script>
+
+    window.addEventListener("load",iniciar)
+    
+    
+    function iniciar(){
+    
+    
+        let play = document.getElementById("iniciarVideo");
+        play.addEventListener("click",playVideo);
+        let pause = document.getElementById("pararVideo");
+        pause.addEventListener("click",pausarVideo);
+        let mas = document.getElementById("zoomMas");
+        mas.addEventListener("click",aumentarZoom);
+        let menos = document.getElementById("zoomMenos");
+        menos.addEventListener("click",disminuirZoom);
+        let predefinido = document.getElementById("predefinido");
+        predefinido.addEventListener("click",original)
+    }
+    
+    function playVideo(){
+        let video = document.getElementById("mivideo");
+    
+        video.play();
+    }
+    
+    function pausarVideo(){
+        let video = document.getElementById("mivideo");
+        video.pause();
+    }
+    
+    function aumentarZoom(){
+
+        let video = document.getElementById("mivideo");
+
+        let ancho = video.width;
+        video.width = ancho+100;
+    }
+    function disminuirZoom(){
+        let video = document.getElementById("mivideo");
+
+        let ancho = video.width;
+        video.width = ancho-100;
+    }
+    function original(){
+        let video = document.getElementById("mivideo");
+
+        video.width = 320;
+    }
+  
+    
+    </script>
+<body>
+    <video id="mivideo" width="320" height="240">
+        <source src="30_seconds_to_mars.mp4" type="video/mp4">
+        <source src="30_seconds_to_mars.webm" type="video/webm">
+        El navegador no reconoce estos formatos de video:mp4, webm
+      </video><br/>
+      <button id="iniciarVideo" >PLAY VIDEO</button>
+    <button id="pararVideo" >PAUSE VIDEO</button>
+    <button id="zoomMas" >ZOOM +</button>
+    <button id="zoomMenos" >ZOOM -</button>
+    <button id="predefinido" >PREDEFINIDO</button>
+</body>
+</html>

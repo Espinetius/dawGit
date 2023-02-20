@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento voz</title>
+</head>
+
+<body>
+    <br><br><br>
+    <input type="button" id="boton" value="Pulsa para hablar">
+    <p id="textoEscuchado"></p>
+</body>
+<script>
+    function speedchAPI() {
+        const SpeechRecognition = webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        recognition.start();
+        recognition.onstart = function() {
+            document.getElementById("textoEscuchado").innerHTML = "Escuchando...";
+        }
+        recognition.onspeechend = function() {
+            document.getElementById("textoEscuchado").innerHTML = "Se detuvo de ejecutar";
+            recognition.stop();
+        }
+        recognition.onresult = function(e) {
+            console.log(e.results);
+            let transcript = e.results[0][0].transcript;
+            let confidence = e.results[0][0].confidence;
+
+            document.getElementById("textoEscuchado").innerHTML = `Has dicho ${transcript} con una fiabilidad de ${parseInt(confidence*100)} %`;
+        }
+    }
+    document.getElementById("boton").addEventListener("click", speedchAPI);
+</script>
+
+</html>

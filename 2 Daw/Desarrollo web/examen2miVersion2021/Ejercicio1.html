@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Examen DOM</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar() {
+            lista = document.getElementById("listado");
+            info = document.getElementById("imprimir");
+            for (i = 0; i < lista.children.length; i++) {
+                lista.children[i].addEventListener("click", añadir);
+            }
+            info.addEventListener("click", mostrarInfo);
+        }
+
+        function añadir() {
+            alumno = prompt("Escribe nombre, apellidos y nota como en el ejemplo", "alvaro rame - 9");
+            array = alumno.split(" ");
+            for (i = 0; i < array.length; i++) {
+                array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+            }
+            alumno = array.join(" ");
+            if (alumno != null) {
+                nuevoLi = document.createElement("li");
+                nodo = document.createTextNode(alumno);
+                nuevoLi.appendChild(nodo);
+                lista.insertBefore(nuevoLi, this);
+            }
+            colorea();
+        }
+
+        function colorea() {
+            for (i = 0; i < lista.children.length; i++) {
+                if (lista.children[i].innerText.substring(lista.children[i].innerText.length - 2) > 7) {
+                    lista.children[i].style.color = "pink";
+                }
+            }
+        }
+
+        function mostrarInfo() {
+            document.getElementById("informacion").innerHTML =
+                `El número de alumnos inscritos es ${lista.children.length}. <br>
+                El primero es ${nombre(lista.children[0].innerText)} y el último es ${nombre(lista.children[lista.children.length - 1].innerText)}. <br>
+                ALUMNOS CON NOTA SUPERIOR A 7: <br>
+                ${superior7()}
+            `
+        }
+
+        function nombre(e) {
+            arr = e.split(" ");
+            alumno = "";
+            alumno = arr[0] + " " + arr[1];
+            return alumno;
+        }
+
+        function superior7() {
+            putosAmos = ``;
+            for (i = 0; i < lista.children.length; i++) {
+                if (lista.children[i].innerText.substring(lista.children[i].innerText.length - 2) > 7) {
+                    putosAmos += `${nombre(lista.children[i].innerText)} <br>`
+                }
+            }
+            return putosAmos;
+
+            // También se puede hacer evaluando el color, ya que los que nos piden son rosas
+            // También podríamos hacer appendChild de cada uno de ellos y así te ahorras el <br> pero da un poco igual
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2> LISTADO DE ALUMNOS Y NOTAS FINALES </h2>
+    <ul id="listado">
+        <li>Pedro Garcia - 8 </li>
+        <li>Alberto Blanco - 7 </li>
+        <li>Ana Pérez - 9 </li>
+        <li>Adrian Sanchez - 6 </li>
+        <li>Rosa Perez - 8 </li>
+        <li>Alberto Sanchez - 5 </li>
+    </ul>
+    <input type="button" id="imprimir" value="Mostrar info">
+
+    <div id="informacion"> </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <h2>PROPIEDADES:</h2>
+    <p id="propiedades"></p>
+    <h2>PAIS</h2>
+    <div id="paises"></div>
+    <h2 id="paisEspecifico"></h2>
+    <div id="datospais"></div>
+</body>
+<script>
+    window.addEventListener('load', cargarJson);
+    divPropiedades = document.getElementById("propiedades");
+    divPropiedades.innerHTML = " ";
+    paises = document.getElementById("paises");
+    paisEspecifico = document.getElementById("paisEspecifico");
+    filtro = document.getElementById("datospais");
+
+    function cargarJson() {
+        fetch("ventas.json")
+            .then(respuesta => respuesta.json())
+            .then(json => mostrarDatos(json))
+            .catch(e => alert(e))
+    }
+
+    function mostrarDatos(e) {
+        propiedades = cargarPropiedades(e);
+        listaPaises = cargarPaises(e);
+    }
+
+    function cargarPropiedades(e) {
+        cpropiedades = Array();
+        for (i = 0; i < e.length; i++) {
+            cpropiedades = Object.keys(e[i]);
+        }
+        console.log(cpropiedades);
+        divPropiedades.innerHTML += cpropiedades;
+        return cpropiedades;
+    }
+
+    function cargarPaises(e) {
+        cPaises = Array();
+        contador = 0;
+        for (i = 0; i < e.length; i++) {
+            for (j = 0; j < e.length + 1; j++) {
+                if (Object.keys(e[i] == "pais")) {
+                    if (cPaises[contador] != e[i].pais) {
+                        cPaises[contador] = e[i].pais;
+                        contador++;
+                    }
+                }
+            }
+
+        }
+        console.log(cPaises);
+        paises.innerHTML += cPaises[i] + "<br>";
+    }
+</script>
+
+</html>

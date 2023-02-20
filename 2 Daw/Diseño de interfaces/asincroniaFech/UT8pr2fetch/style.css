@@ -1,0 +1,30 @@
+body {
+    background: #7a699e;  
+   }
+
+h1, p {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    text-align: center;
+    color: white;
+}
+.contenido {
+    margin: 2rem auto 0 auto;
+    color: white;
+    text-align: center;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+button {
+    margin-left: 4rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 1.5rem;
+}
+h1 {
+    font-size: 2rem;
+}
+a {
+    font-size: 1.2rem;
+    color: white;
+}
+p {
+    font-size: 1.4rem;
+}

@@ -1,0 +1,3 @@
+CentroOcio{identificador -0-, nombre -centroPrueba-, precioEntrada -0.0-, provincia -Madrid-, anyoConstruccion -2022-, valoracionesUsuarios -5-, edadMinima -10}
+CentroOcio{identificador -0-, nombre -centroPrueba-, precioEntrada -0.0-, provincia -Madrid-, anyoConstruccion -2022-, valoracionesUsuarios -5-, delfinario -true- , pinguinos -true}
+CentroOcio{identificador -0-, nombre -centroPrueba-, precioEntrada -0.0-, provincia -Madrid-, anyoConstruccion -2022-, valoracionesUsuarios -5-, edadMinima -45}

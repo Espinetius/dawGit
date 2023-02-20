@@ -1,0 +1,14 @@
+#caja1,
+#caja2,
+#caja3 {
+    background-color: #f99;
+    font-family: verdana;
+    font-size: 1.3rem;
+}
+
+#caja2 {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    background-color: yellow;
+}

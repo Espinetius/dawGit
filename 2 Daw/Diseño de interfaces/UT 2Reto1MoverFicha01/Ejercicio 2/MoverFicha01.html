@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MoverFicha01.css">
+    <title>Colocar Ficha</title>
+</head>
+
+<body>
+    <div class="juego">
+        <div class="caja" id="caja1">
+            <img src="zanahoria.JPG" alt="">
+            <div class="ficha" id="ficha1"> 1 </div>
+        </div>
+
+        <div class="caja" id="caja2">
+            <img src="piratas.jpg" alt="">
+        </div>
+        <div class="caja" id="caja4">
+            <img src="PalomaSinFondo-576x1024.png" alt="">
+        </div>
+    </div>
+    <button class="boton" id="botonmover">Mover</button>
+</body>
+<script>
+    window.addEventListener("load", inicioPartida);
+
+    function inicioPartida() {
+        ficha = document.getElementById("ficha1");
+        inicio = document.getElementById("caja1");
+        fin = document.getElementById("caja4");
+        boton = document.getElementById("botonmover");
+        boton.addEventListener("click", moverFichas);
+    }
+
+    function moverFichas() {
+        cajadesconocida = ficha.parentElement;
+        if (cajadesconocida.getAttribute("id") == "caja1") {
+            document.getElementById("caja2").appendChild(ficha);
+        } else if (cajadesconocida.getAttribute("id") == "caja2") {
+            document.getElementById("caja4").appendChild(ficha);
+        } else {
+            alert("El juego ha terminado");
+        }
+    }
+</script>
+
+</html>

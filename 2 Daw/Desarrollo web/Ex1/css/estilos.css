@@ -1,0 +1,59 @@
+.gallery {
+    width: 60%;
+    margin: auto;
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h2::after {
+    content: url(./../img/cloud_circle-24px.svg);
+    margin-left: 8px;
+}
+
+.intro::first-letter {
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 4em;
+    background-color: #88A2D1;
+    color: #8FDA35;
+    line-height: 1;
+    margin-right: 10px;
+    padding-right: 20px;
+}
+
+.intro::first-line {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.intro::selection {
+    background-color: #8FDA35;
+}
+
+h3+p {
+    color: pink;
+}
+
+#footer p {
+    color: red;
+}
+
+a[href*="html"] {
+    color: purple;
+    text-decoration: none;
+}
+
+.isos {
+    cursor: crosshair;
+}
+
+li {
+    list-style: none;
+}

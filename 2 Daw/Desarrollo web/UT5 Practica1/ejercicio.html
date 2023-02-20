@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        .caja_1 {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ej2 {
+            visibility: visible;
+        }
+        
+        .ej3 {
+            width: 330px;
+            height: 330px;
+            border: 1px solid black;
+            float: left;
+        }
+        
+        .contenido {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            position: relative;
+        }
+        
+        .fila {
+            border: 1px solid black;
+            width: 320px;
+            height: 50px;
+            position: absolute;
+            z-index: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="1" class="caja_1">1</div>
+    <div class="ej2">
+        <p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+            Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+            odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+        <a id="enlace_1" href="#">Ocultar contenidos</a>
+        <br />
+        <p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+            Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+            odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+        <a id="enlace_2" href="#">Ocultar contenidos</a>
+        <br />
+        <p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+            Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+            odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+        <a id="enlace_3" href="#">Ocultar contenidos</a>
+    </div>
+    <div class="ej3 contenido" id="contenedor">
+        <h3 id="titulo">Ratón</h3>
+        <p id="nav">Navegador: 0, 0</p>
+        <p id="pag">Página: 0, 0</p>
+
+        <div class="fila" id="fila">
+            Se mueve el ratón
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+
+</html>

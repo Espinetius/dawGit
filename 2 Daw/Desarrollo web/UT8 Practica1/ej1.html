@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej1</title>
+</head>
+
+<body>
+    <h1>Cookies</h1>
+
+    <div class="labels">
+        <label for="">Nombre de la cookie</label>
+        <input type="text" id="nombreCookie"></br>
+        <label for="">Valor de la cookie</label>
+        <input type="text" id="valorCookie"></br>
+        <label for="">Número de dias para que expire la cookie</label>
+        <input type="number" id="expiracionCookie"></br>
+    </div>
+    <div class="botones">
+        <button id="crearCookie">
+            Crear Cookie
+        </button>
+        <button id="modCookie">
+            Modificar Cookie
+        </button>
+        <button id="borrarCookie">
+            Borrar Cookie
+        </button>
+        <button id="verCookie">
+            Ver una Cookie
+        </button>
+        <button id="verTodasCookies">
+            Ver todas las Cookies
+        </button>
+        <button id="borrarTodasCookies">
+            Eliminar todas las Cookies
+        </button>
+    </div>
+</body>
+<script>
+    window.addEventListener("load", inicio);
+
+    function inicio() {
+        botonCrear = document.getElementById("crearCookie");
+        botonMod = document.getElementById("modCookie");
+        botonBorrar = document.getElementById("borrarCookie");
+        botonVer = document.getElementById("verCookie");
+        botonVerTodas = document.getElementById("verTodasCookies");
+        botonBorrarTodas = document.getElementById("borrarTodasCookies");
+        botonCrear.addEventListener("click", crear);
+
+    }
+
+    function crear() {
+        nombrecookie = document.getElementById("nombreCookie").value;
+        valorcookie = document.getElementById("valorCookie").value;
+        expiracioncookie = document.getElementById("expiracionCookie").value;
+        if (expiracioncookie != "") {
+            fecha = new Date();
+            exp = fecha.setTime(fecha.getTime() + (expiracioncookie * 24 * 60 * 60 * 1000));
+            document.cookie = nombrecookie + '=' + valorcookie + ';' + exp;
+        } else {
+            document.cookie = nombrecookie + '=' + valorcookie;
+        }
+    }
+
+
+    function mod(nombrecookie, valorcookie, expiracioncookie) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function borrar(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+
+    setCookie('ppkcookie', 'testcookie', 7);
+
+
+    function vertodas() {
+        nombrecookie = document.getElementById("nombreCookie");
+        valorcookie = document.getElementById("valorCookie");
+        expiracioncookie = document.getElementById("expiracionCookie").value;
+
+    }
+
+    function borrartodas() {
+        nombrecookie = document.getElementById("nombreCookie");
+        valorcookie = document.getElementById("valorCookie");
+        expiracioncookie = document.getElementById("expiracionCookie").value;
+
+    }
+</script>
+
+
+
+</html>

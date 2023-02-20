@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: purple;
+        }
+        
+        #logo {
+            width: 25%;
+            float: left;
+            margin-top: 35px;
+        }
+        
+        #logo img {
+            height: 100px;
+        }
+        
+        #menu {
+            width: 75%;
+            float: right;
+        }
+        
+        #menu ul {
+            line-height: 85px;
+        }
+        
+        #menu ul li {
+            display: inline-block;
+            list-style: none;
+            height: 46px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        
+        #menu a {
+            text-decoration: none;
+        }
+        
+        h3 {
+            width: 3vw;
+            color: white;
+        }
+        
+        @media screen and (min-width:1200px) {
+            body {
+                background-color: pink;
+                color: #444;
+            }
+        }
+        
+        @media screen and (max-width:1199px) {
+            body {
+                background-color: green;
+            }
+        }
+        
+        @media screen and (max-width:899px) {
+            body {
+                background-color: blue;
+            }
+        }
+        
+        @media screen and (max-width:599px) {
+            body {
+                background-color: red;
+            }
+            #logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                float: none;
+                margin-left: 36%;
+            }
+            #menu ul li {
+                display: block;
+                margin: 0px auto;
+                padding: 0px;
+                text-align: center;
+                float: none;
+                padding-right: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            body {
+                background-color: grey;
+            }
+        }
+        
+        @viewport {
+            width: device-width;
+            initial-scale: 1;
+            zoom: 1.0;
+        }
+    </style>
+
+    </script>
+</head>
+
+<body>
+    <h3>Ejemplo 2 Media query</h3>
+    <div>
+        <!-- LOGO -->
+        <div id="logo">
+            <img src="IFC.png" alt="Logotipo" />
+
+        </div>
+        <!-- MENU -->
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Página 1</a>
+                </li>
+                <li>
+                    <a href="#">Página 2</a>
+                </li>
+                <li>
+                    <a href="#">Página 3</a>
+                </li>
+
+            </ul>
+        </nav>
+</body>
+
+</html>

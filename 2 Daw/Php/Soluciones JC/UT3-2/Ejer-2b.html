@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!-- Solicita vía formulario dos operandos y un operador aritmético.
+
+    Envía los datos introducidos/seleccionados al servidor por el método POST.
+-->
+
+<html>
+    <head>
+        <title>Ejercicio 2b formularios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Introduzca dos números</p>
+        <form action="Ejer-2.php"  method="post">
+            Operando 1: <input type="text" name="oper1" required/><br/>
+            Operando 2: <input type="text" name="oper2" required/><br/>
+            
+            Seleccione operación:
+            <input type="submit" name="operacion" value="+"/>
+            <input type="submit" name="operacion" value="-"/>
+            <input type="submit" name="operacion" value="*"/>
+            <input type="submit" name="operacion" value="/"/>
+        </form>
+    </body>
+</html>

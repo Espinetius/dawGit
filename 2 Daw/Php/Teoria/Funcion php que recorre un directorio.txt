@@ -1,0 +1,25 @@
+<?php
+
+/* Función que recorre los archivos de un cierto directorio que se introduce 
+ * como parámetrro
+ */ 
+
+function recorreDir($dir) {
+   $archivos = array();  // Inicializar array de archivos
+   
+   if (is_dir($dir)) {   // Si $dir no es un directorio, nada que recorrer
+   
+       if ($dh = opendir($dir)) {  // Si éxito al abrir el directorio, recorrer 
+	   
+           while (($file = readdir($dh)) !== false) { // Saltar subdirectorios 
+               if ( $file != '.' && $file != '..' ) { // Saltar directorio actual y padre
+                  $archivos[] = $file; // Añadir fichero al array 
+           }
+           closedir($dh);  // Cerrar el flujo
+       }
+   }
+
+   return $archivos;
+}
+     
+   

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Cambiar Color de fondo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("<form name=\"cambiacolor\">");
+		document.write("<b>Selecciona un color para el fondo de página:</b><br>");
+		document.write("<select name=\"color\">");
+    	document.write("<option value=\"red\">Rojo</option>");
+    	document.write("<option value=\"blue\">Azul</option>");
+    	document.write("<option value=\"yellow\">Amarillo</option>");
+    	document.write("<option value=\"green\">Verde</option>");
+    	document.write("</select>"); 
+		document.write("<input type=\"button\" value=\"Modifica el color\" onclick=\"document.bgColor = document.cambiacolor.color.value\">");
+		document.write("</form>");
+	</script>
+</body>
+</html>

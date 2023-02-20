@@ -1,0 +1,36 @@
+caption {
+    font-family: arial;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+tbody {
+    background-color: brown;
+    border: 2px solid black;
+}
+
+tbody th {
+    background-color: aqua;
+    border: none;
+    color: yellow;
+}
+
+thead {
+    background-color: aqua;
+    color: white;
+}
+
+td {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+th,
+td {
+    text-align: center;
+    width: 100px;
+    height: 20px;
+}
